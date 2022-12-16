@@ -4,7 +4,7 @@
 
 # Toolkits
 
-- NILMTK: Non-Intrusive Load Monitoring Toolkit [[PDF](https://arxiv.org/pdf/1404.3878v1.pdf)][[CODE]([GitHub - nilmtk/nilmtk: Non-Intrusive Load Monitoring Toolkit (nilmtk)](https://github.com/nilmtk/nilmtk))]
+- NILMTK: Non-Intrusive Load Monitoring Toolkit [[PDF](https://arxiv.org/pdf/1404.3878v1.pdf)][[CODE](https://github.com/nilmtk/nilmtk)]
   
 - NILMTK-Contrib [[PDF](https://dl.acm.org/doi/10.1145/3360322.3360844)][[Model](https://nipunbatra.github.io/papers/2021/buildsys.pdf)][[Tensorflow](https://github.com/nilmtk/nilmtk-contrib)]
   
@@ -12,7 +12,7 @@
   
 - Torch-NILM [[PDF](https://www.mdpi.com/1996-1073/15/7/2647)][[Pytorch](https://github.com/Virtsionis/torch-nilm)]
   
-- Deep-NILMtk [[PDF](http://nilmworkshop.org/2022/proceedings/nilm22-final4.pdf)][[Pytorch](https://github.com/BHafsa/deep-nilmtk-v1/tree/master/deep_nilmtk/models/pytorch)][[Tensorflow]([deep-nilmtk-v1/deep_nilmtk/models/tensorflow at master · BHafsa/deep-nilmtk-v1 · GitHub](https://github.com/BHafsa/deep-nilmtk-v1/tree/master/deep_nilmtk/models/tensorflow))]
+- Deep-NILMtk [[PDF](http://nilmworkshop.org/2022/proceedings/nilm22-final4.pdf)][[Pytorch](https://github.com/BHafsa/deep-nilmtk-v1/tree/master/deep_nilmtk/models/pytorch)][[Tensorflow](https://github.com/BHafsa/deep-nilmtk-v1/tree/master/deep_nilmtk/models/tensorflow)]
   
 
 # Datasets
@@ -35,10 +35,10 @@
 
 ## Methods
 
-#### Thresholding Methods in Non-Intrusive Load Monitoring to Estimate Appliance Status
+### Thresholding Methods in Non-Intrusive Load Monitoring to Estimate Appliance Status
 
-> We treat three different thresholding methods to perform this task, discussing their differences on various devices from the UK-DALE dataset. [[PDF]([Thresholding Methods in Non-Intrusive Load Monitoring to Estimate Appliance Status | Research Square](https://www.researchsquare.com/article/rs-1923023/v1))][[Pytorch](https://github.com/UCA-Datalab/nilm-thresholding)]
+> We treat three different thresholding methods to perform this task, discussing their differences on various devices from the UK-DALE dataset. [[PDF](https://www.researchsquare.com/article/rs-1923023/v1)][[Pytorch](https://github.com/UCA-Datalab/nilm-thresholding)]
 
-![](file://G:\GSPG\NILM\awesome-nilm-with-code\img\nilm-threshold-1.png?msec=1671164337883)<center>Sample from the washing machine power load sequence, depicting how different thresholding methods classify each instance as ON or OFF. (a) Variance-Sensitive. (b) Middle-Point. (c) Activation-Time.</center>
+![](./img/nilm-threshold-1.png?msec=1671164337883)<center>Sample from the washing machine power load sequence, depicting how different thresholding methods classify each instance as ON or OFF. (a) Variance-Sensitive. (b) Middle-Point. (c) Activation-Time.</center>
 
-![](file://G:\GSPG\NILM\awesome-nilm-with-code\img\nilm-threshold-2.png?msec=1671164518593)<center>Architecture of each model. There are two possible outputs, the model trains differently depending of which output we chose. (a) CONV. (b) GRU.</center>
+![](./img/nilm-threshold-2.png?msec=1671164518593)<center>Architecture of each model. There are two possible outputs, the model trains differently depending of which output we chose. (a) CONV. (b) GRU.</center>
