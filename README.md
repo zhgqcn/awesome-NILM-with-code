@@ -35,12 +35,15 @@
 
 <p align="center">
     <img title="sfd" src="./img/nilm-threshold-1.png" alt="sdf" data-align="center" width="711">
-	Sample from the washing machine power load sequence, depicting how different thresholding methods classify each instance as ON or OFF. (a) Variance-Sensitive. (b) Middle-Point. (c) Activation-Time.	
+	<center>
+        Sample from the washing machine power load sequence, depicting how different thresholding methods classify each instance as ON or OFF. (a) Variance-Sensitive. (b) Middle-Point. (c) Activation-Time.	</center>	
 </p>
 
 <p align="center">
     <img title="" src="./img/nilm-threshold-2.png" alt="" width="408" data-align="center">
-    <center>Architecture of each model. There are two possible outputs, the model trains differently depending of which output we chose. (a) CONV. (b) GRU.</center>
+    <center>
+        Architecture of each model. There are two possible outputs, the model trains differently depending of which output we chose. (a) CONV. (b) GRU.
+    </center>
 </p>
 
 
