@@ -41,16 +41,7 @@
 > We treat three different thresholding methods to perform this task, discussing their differences on various devices from the UK-DALE dataset. [[PDF](https://www.researchsquare.com/article/rs-1923023/v1)] [[Pytorch](https://github.com/UCA-Datalab/nilm-thresholding)] [2022]
 
 <p align="center">
-    <img title="sfd" src="./img/nilm-threshold-1.png" alt="sdf" data-align="center" width="711">
-	<center>
-        Sample from the washing machine power load sequence, depicting how different thresholding methods classify each instance as ON or OFF. (a) Variance-Sensitive. (b) Middle-Point. (c) Activation-Time.	</center>	
-</p>
-
-<p align="center">
-    <img title="" src="./img/nilm-threshold-2.png" alt="" width="408" data-align="center">
-    <center>
-        Architecture of each model. There are two possible outputs, the model trains differently depending of which output we chose. (a) CONV. (b) GRU.
-    </center>
+    <img title="" src="./img/nilm-threshold.png" alt="" data-align="center">
 </p>
 
 
@@ -61,8 +52,9 @@
 
 <p align='center'>
     <img title="" src="./img/Weak-NILM.png" alt="" width="800" data-align="center">
-    <center>The architectures for Weak-NILM.</center>
 </p>
+
+
 
 ### ELECTRIcity: An Efficient Transformer for Non-Intrusive Load Monitoring
 
@@ -70,8 +62,9 @@
 
 <p align='center'>
     <img title="" src="./img/ELECTRIcity.png" alt="" width="600" data-align="center">
-    <center>Overview of ELECTRIcity’s model training routine.</center>
 </p>
+
+
 
 ### Improving Non-Intrusive Load Disaggregation through an Attention-Based Deep Neural Network
 
@@ -80,6 +73,8 @@
 <p align='center'>
     <img title="" src="./img/attention-NILM.png" alt="" width="800" data-align="center">
 </p>
+
+
 
 ### Energy Disaggregation using Variational Autoencoders
 
@@ -97,7 +92,6 @@
 
 <p align='center'>
     <img title="" src="./img/BERT4NILM.png" alt="" width="800" data-align="center">
-    <center>Architecture of BERT4NILM</center>
 </p>
 
 
@@ -148,7 +142,6 @@
 
 <p align='center'>
     <img title="" src="./img/TP-NILM.png" alt="" width="700" data-align="center">
-    <center>The architectures for Temporal Pooling NILM (TP-NILM).</center>
 </p>
 
 
@@ -163,8 +156,9 @@
 
 <p align='center'>
     <img title="" src="./img/Edge-NILM-2.png" alt="" width='800' data-align="center">
-    <center>Multi-task learning architecture built over the Seq2Point model.</center>
 </p>
+
+
 
 ### Deep Learning Based Energy Disaggregation and On/Off Detection of Household Appliances
 
@@ -191,8 +185,7 @@
 > Appliance transfer learning (ATL) and cross-domain transfer learning (CTL). [[PDF](https://arxiv.org/pdf/1902.08835.pdf)] [[Tensorflow](https://github.com/MingjunZhong/transferNILM)] [2019]
 
 <p align='center'>
-    <img title="" src="./img/TransferNILM.png" alt="" width='500' data-align="center">
-    <center>Transfer learning used in this paper. For the appliance transfer learning, the CNN layers trained by appliance A are transferred to appliance B and frozen; only the fully connected layers are trained for appliance B. For crossdomain transfer learning, if domain A and domain B are similar, both CNN and fully connected layers trained in domain A are transferred to B; if they are different, the CNN layers are transferred from A to B and only fully connected layers are trained on domain B.</center>
+    <img title="" src="./img/TransferNILM.png" alt="" width='700' data-align="center">
 </p>
 
 
@@ -223,7 +216,6 @@
 
 <p align='center'>
     <img title="" src="./img/Seq2Point.png" alt="" data-align="center">
-    <center>The architectures for sequence-to-point and sequence-to-sequence neural networks.</center>
 </p>
 
 
