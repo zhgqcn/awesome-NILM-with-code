@@ -30,9 +30,9 @@
 
 ## Reviews
 
-- NILM applications: Literature review of learning approaches, recent developments and challenges [[PDF](https://www.sciencedirect.com/science/article/abs/pii/S0378778822001220)][2022]
+- NILM applications: Literature review of learning approaches, recent developments and challenges [[PDF](https://www.sciencedirect.com/science/article/abs/pii/S0378778822001220)] [2022]
 
-- Review on Deep Neural Networks Applied to Low-Frequency NILM [[PDF](https://www.mdpi.com/1996-1073/14/9/2390)][2021]
+- Review on Deep Neural Networks Applied to Low-Frequency NILM [[PDF](https://www.mdpi.com/1996-1073/14/9/2390)] [2021]
 
 ## Methods
 
@@ -61,7 +61,7 @@
 
 <p align='center'>
     <img title="" src="./img/Weak-NILM.png" alt="" width="800" data-align="center">
-    The architectures for Weak-NILM.
+    <center>The architectures for Weak-NILM.</center>
 </p>
 
 ### ELECTRIcity: An Efficient Transformer for Non-Intrusive Load Monitoring
@@ -70,7 +70,7 @@
 
 <p align='center'>
     <img title="" src="./img/ELECTRIcity.png" alt="" width="600" data-align="center">
-    Overview of ELECTRIcity’s model training routine.
+    <center>Overview of ELECTRIcity’s model training routine.</center>
 </p>
 
 ### Improving Non-Intrusive Load Disaggregation through an Attention-Based Deep Neural Network
