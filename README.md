@@ -97,7 +97,7 @@
 
 <p align='center'>
     <img title="" src="./img/BERT4NILM.png" alt="" width="800" data-align="center">
-    Architecture of BERT4NILM
+    <center>Architecture of BERT4NILM</center>
 </p>
 
 
@@ -148,7 +148,7 @@
 
 <p align='center'>
     <img title="" src="./img/TP-NILM.png" alt="" width="700" data-align="center">
-    The architectures for Temporal Pooling NILM (TP-NILM).
+    <center>The architectures for Temporal Pooling NILM (TP-NILM).</center>
 </p>
 
 
@@ -163,7 +163,7 @@
 
 <p align='center'>
     <img title="" src="./img/Edge-NILM-2.png" alt="" width='800' data-align="center">
-    Multi-task learning architecture built over the Seq2Point model
+    <center>Multi-task learning architecture built over the Seq2Point model.</center>
 </p>
 
 ### Deep Learning Based Energy Disaggregation and On/Off Detection of Household Appliances
@@ -192,7 +192,7 @@
 
 <p align='center'>
     <img title="" src="./img/TransferNILM.png" alt="" width='500' data-align="center">
-    Transfer learning used in this paper. For the appliance transfer learning, the CNN layers trained by appliance A are transferred to appliance B and frozen; only the fully connected layers are trained for appliance B. For crossdomain transfer learning, if domain A and domain B are similar, both CNN and fully connected layers trained in domain A are transferred to B; if they are different, the CNN layers are transferred from A to B and only fully connected layers are trained on domain B.
+    <center>Transfer learning used in this paper. For the appliance transfer learning, the CNN layers trained by appliance A are transferred to appliance B and frozen; only the fully connected layers are trained for appliance B. For crossdomain transfer learning, if domain A and domain B are similar, both CNN and fully connected layers trained in domain A are transferred to B; if they are different, the CNN layers are transferred from A to B and only fully connected layers are trained on domain B.</center>
 </p>
 
 
@@ -223,7 +223,7 @@
 
 <p align='center'>
     <img title="" src="./img/Seq2Point.png" alt="" data-align="center">
-    The architectures for sequence-to-point and sequence-to-sequence neural networks.
+    <center>The architectures for sequence-to-point and sequence-to-sequence neural networks.</center>
 </p>
 
 
