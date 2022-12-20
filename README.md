@@ -46,6 +46,7 @@
 
 
 
+
 ### Multi-Label Appliance Classification with Weakly Labeled Data for Non-Intrusive Load Monitoring
 
 > This paper presents an appliance classification method based on a Convolutional Recurrent Neural Network trained with weak supervision.  [[PDF](https://ieeexplore.ieee.org/document/9831435)] [[Pytorch](https://github.com/GiuTan/Weak-NILM)] [2022]
@@ -53,6 +54,7 @@
 <p align='center'>
     <img title="" src="./img/Weak-NILM.png" alt="" width="800" data-align="center">
 </p>
+
 
 
 
@@ -66,6 +68,7 @@
 
 
 
+
 ### Improving Non-Intrusive Load Disaggregation through an Attention-Based Deep Neural Network
 
 > We improve the generalization capability of the overall architecture by including an encoder–decoder with a tailored attention mechanism in the regression subnetwork. The attention mechanism is inspired by the temporal attention. [[PDF](https://www.mdpi.com/1996-1073/14/4/847)] [[Tensorflow](tensorflow)] [2021]
@@ -73,6 +76,7 @@
 <p align='center'>
     <img title="" src="./img/attention-NILM.png" alt="" width="800" data-align="center">
 </p>
+
 
 
 
@@ -86,6 +90,7 @@
 
 
 
+
 ### BERT4NILM: A Bidirectional Transformer Model for Non-Intrusive Load Monitoring
 
 > We propose BERT4NILM, an architecture based on bidirectional encoder representations from transformers (BERT) and an improved objective function designed specifically for NILM learning. We adapt the bidirectional transformer architecture to the field of energy disaggregation and follow the pattern of sequence-to-sequence learning. [[PDF](https://dl.acm.org/doi/10.1145/3427771.3429390)] [[Pytorch](https://github.com/Yueeeeeeee/BERT4NILM)] [2020]
@@ -93,6 +98,7 @@
 <p align='center'>
     <img title="" src="./img/BERT4NILM.png" alt="" width="800" data-align="center">
 </p>
+
 
 
 
@@ -106,6 +112,7 @@
 
 
 
+
 ### On time series representations for multi-label NILM
 
 >The proposed system leverages dimensionality reduction using Signal2Vec, is evaluated on two popular public datasets and outperforms another state-of-the-art multi-label NILM system. [[PDF](https://link.springer.com/epdf/10.1007/s00521-020-04916-5?sharing_token=bTZg6CBADDbWx7UVvztexPe4RwlQNchNByi7wbcMAY4YyOCPZ8jI-u3LyC4lDtEOZIQACACm_MVY_633J4jzg0CtjGEkhvPkzOs5Z-2UGgB1P_m1_4nDnPxtIplmNRaDx7TM52V6MVQYVJPSqJEKpxv1n3RqXoEm1ZpW5amjaaA%3D)] [[Scikit-learn](https://github.com/ChristoferNal/multi-nilm)] [2020]
@@ -113,6 +120,7 @@
 <p align='center'>
     <img title="" src="./img/online-multi-nilm.png" alt="" data-align="center">
 </p>
+
 
 
 
@@ -126,13 +134,15 @@
 
 
 
+
 ### UNet-NILM: A Deep Neural Network for Multi-tasks Appliances State Detection and Power Estimation in NILM
 
->We propose UNet-NILM for multi-task appliances' state detection and power estimation, applying a multi-label learning strategy and multi-target quantile regression.  [[PDF](https://dl.acm.org/doi/10.1145/3427771.3427859)] [[Pytorch](https://github.com/sambaiga/UNETNiLM)] [2020] 
+>We propose UNet-NILM for multi-task appliances' state detection and power estimation, applying a multi-label learning strategy and multi-target quantile regression.  [[PDF](https://dl.acm.org/doi/10.1145/3427771.3427859)] [[Official | Pytorch](https://github.com/sambaiga/UNETNiLM)] [[Reimplement | Pytorch](https://github.com/jonasbuchberger/energy_disaggregation)] [2020] 
 
 <p align='center'>
     <img title="" src="./img/Unet-NILM.png" alt=""  data-align="center">
 </p>
+
 
 
 
@@ -146,6 +156,7 @@
 
 
 
+
 ### EdgeNILM: Towards NILM on Edge Devices
 
 > We study different neural network compression schemes and their efficacy on the state-of-the-art neural network NILM method. We additionally propose a multi-task learning-based architecture to compress models further. [[PDF](https://dl.acm.org/doi/pdf/10.1145/3408308.3427977)] [[Pytorch](https://github.com/EdgeNILM/EdgeNILM)] [2020]
@@ -154,9 +165,11 @@
     <img title="" src="./img/Edge-NILM-1.png" alt="" width='700' data-align="center">
 </p>
 
+
 <p align='center'>
     <img title="" src="./img/Edge-NILM-2.png" alt="" width='800' data-align="center">
 </p>
+
 
 
 
@@ -170,6 +183,7 @@
 
 
 
+
 ### Wavenilm: A causal neural network for power disaggregation from the complex power signal
 
 > We present a causal 1-D convolutional neural network inspired by WaveNet for NILM on low-frequency data. We also study using various components of the complex power signal for NILM, and demonstrate that using all four components available in a popular NILM dataset (current, active power, reactive power, and apparent power). [[PDF](https://arxiv.org/pdf/1902.08736.pdf)] [[Keras](https://github.com/picagrad/WaveNILM)] [2019]
@@ -177,6 +191,7 @@
 <p align='center'>
     <img title="" src="./img/WaveNILM.png" alt="" data-align="center">
 </p>
+
 
 
 
@@ -190,6 +205,7 @@
 
 
 
+
 ### Sliding Window Approach for Online Energy Disaggregation Using Artificial Neural Networks 
 
 > We propose two recurrent network architectures that use sliding window for real-time energy disaggregation.  [[PDF](https://dl.acm.org/doi/pdf/10.1145/3200947.3201011)] [[Keras](https://github.com/OdysseasKr/online-nilm)] [2018]
@@ -197,6 +213,7 @@
 <p align='center'>
     <img title="" src="./img/Short-Seq2Point.png" alt="" data-align="center">
 </p>
+
 
 
 
@@ -210,6 +227,7 @@
 
 
 
+
 ### Sequence-to-point learning with neural networks for non-intrusive load monitoring
 
 > We propose sequence-to-point learning, where the input is a window of the mains and the output is a single point of the target appliance. [[PDF](https://arxiv.org/pdf/1612.09106.pdf)] [[Tensorflow](https://github.com/MingjunZhong/seq2point-nilm)] [2017]
@@ -217,6 +235,7 @@
 <p align='center'>
     <img title="" src="./img/Seq2Point.png" alt="" data-align="center">
 </p>
+
 
 
 
