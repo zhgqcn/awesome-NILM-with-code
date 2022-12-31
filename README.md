@@ -68,6 +68,13 @@
 
 
 
+### Deep Learning-Based Non-Intrusive Commercial Load Monitoring
+
+>The key elements of the method are a new neural network structure called TTRNet and a new loss function called MLFL. TTRNet is a multi-label  classification model that can autonomously learn correlation information through its unique network structure. MLFL is a loss function specifically designed for multi-label classification tasks, which solves the imbalance problem and improves the monitoring accuracy for challenging loads. [[PDF](https://www.researchgate.net/publication/361988541_Deep_Learning-Based_Non-Intrusive_Commercial_Load_Monitoring/figures?lo=1)] [[Pytorch](https://github.com/shaoshuai6666/TTRNet)] [2022]
+
+<p align='center'>
+    <img title="" src="./img/TTRNet.png" alt="" width="800" data-align="center">
+</p>
 
 ### Improving Non-Intrusive Load Disaggregation through an Attention-Based Deep Neural Network
 
