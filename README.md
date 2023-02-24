@@ -12,10 +12,11 @@
 - Torch-NILM [[PDF](https://www.mdpi.com/1996-1073/15/7/2647)] [[Pytorch](https://github.com/Virtsionis/torch-nilm)]
 - Deep-NILMtk [[PDF](http://nilmworkshop.org/2022/proceedings/nilm22-final4.pdf)] [[Pytorch](https://github.com/BHafsa/deep-nilmtk-v1/tree/master/deep_nilmtk/models/pytorch)] [[Tensorflow](https://github.com/BHafsa/deep-nilmtk-v1/tree/master/deep_nilmtk/models/tensorflow)]
 - nilmtk-ukdale: Exploratory Data Analysis [[Pytorch](https://github.com/kehkok/nilmtk-ukdale)]
-
 - NeuralNILM_Pytorch [[Pytorch](https://github.com/Ming-er/NeuralNILM_Pytorch)] 
 
-
+# Conference
+- [Energy Informatics](https://energyinformatics.springeropen.com/)
+- [International Workshop on Non-Intrusive Load Monitoring](http://nilmworkshop.org/2022/)
 
 # Datasets
 
