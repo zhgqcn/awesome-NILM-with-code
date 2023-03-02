@@ -17,6 +17,7 @@
 # Conference
 - [Energy Informatics](https://energyinformatics.springeropen.com/)
 - [International Workshop on Non-Intrusive Load Monitoring](http://nilmworkshop.org/2022/)
+- [International Conference on Power Engineering and Renewable Energy (ICPERE)](http://icpere2022.com/)
 
 # Datasets
 
