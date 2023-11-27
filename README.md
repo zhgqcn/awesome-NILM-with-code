@@ -1,6 +1,8 @@
 # 🌟awesome-NILM-with-code ![Awesome](https://camo.githubusercontent.com/64f8905651212a80869afbecbf0a9c52a5d1e70beab750dea40a994fa9a9f3c6/68747470733a2f2f617765736f6d652e72652f62616467652e737667)
 
-> A repository of awesome Non-Intrusive Load Monitoring (NILM) with code
+> **A repository of awesome Non-Intrusive Load Monitoring (NILM) with code** 
+>
+> 😸 Welcome valuable opinions from researchers in the same direction
 
 
 
@@ -30,7 +32,7 @@
 |               Type                |                           Dataset                            |
 | :-------------------------------: | :----------------------------------------------------------: |
 |     **Residential datasets**      | [[UK-DALE](https://www.nature.com/articles/sdata20157)] [[REDD](https://energy.duke.edu/content/reference-energy-disaggregation-data-set-redd)] [[REFIT](https://pureportal.strath.ac.uk/en/datasets/refit-electrical-load-measurements-cleaned)] [[AMpds/2](http://ampds.org/)] [[Dataport](https://ieee-dataport.org/keywords/nilm)] [[ECO](http://www.vs.inf.ethz.ch/res/show.html?what=eco-data)] [[ENERTALK](https://www.nature.com/articles/s41597-019-0212-5)] [[iAWE](https://iawe.github.io/)] [[BLUED](http://portoalegre.andrew.cmu.edu:88/BLUED/)] [[PLAID](https://www.nature.com/articles/s41597-020-0389-7)] [[DRED](https://www.st.ewi.tudelft.nl/~akshay/dred/)] [[Georges Hebrail UCI](https://archive.ics.uci.edu/ml/datasets/individual%2Bhousehold%2Belectric%2Bpower%2Bconsumption)] [[GREEND](https://sourceforge.net/projects/greend/)] [[HES](https://randd.defra.gov.uk/ProjectDetails?ProjectID=17359&FromSearch=Y&Publisher=1&SearchText=EV0702&SortString=ProjectCode&SortOrder=Asc&Paging=10#Description)] [[TraceBase](https://github.com/areinhardt/tracebase)] [[IDEAL](https://www.nature.com/articles/s41597-021-00921-y)] |
-| **Commercial buildings datasets** |            [[COMBED](https://combed.github.io/)] [[BLOND](https://www.nature.com/articles/sdata201848)]             |
+| **Commercial buildings datasets** | [[COMBED](https://combed.github.io/)] [[BLOND](https://www.nature.com/articles/sdata201848)] |
 |      **Industrial datasets**      | [[Industrial Machines Dataset](https://ieee-dataport.org/open-access/industrial-machines-dataset-electrical-load-disaggregation)] [[Aachen Smart Factory](http://www.finesce.eu/Trial_Site_Aachen.html)] [[HIPE](https://www.energystatusdata.kit.edu/hipe.php)] |
 |        **Synthetic Data**         | [[SynD](https://github.com/klemenjak/SynD/)] [[COLD](https://github.com/arx7ti/cold-nilm)] [[FIRED](https://github.com/voelkerb/FIRED_dataset_helper)] [[SHED](https://nilm.telecom-paristech.fr/shed/)] [[smartsim](https://github.com/sustainablecomputinglab/smartsim)] |
 
@@ -69,6 +71,8 @@
     <img title="" src="./img/MSDC-NILM_2023-11-27_11-33-35.jpg" alt="" width="800" data-align="center">
 </p>
 
+
+
 ### Neural Load Disaggregation: Meta-Analysis, Federated Learning and Beyond
 
 > This paper emphasizes federated neural NILM, receiving increasing attention due to its ability to preserve end-users’ privacy. Typically, by combining several locally trained models, federated learning has excellent potential to train NILM models locally without communicating sensitive data with cloud servers. [[PDF](https://www.mdpi.com/1996-1073/16/2/991)] [[Pytorch](https://github.com/BHafsa/FL-NILM)] [2023]
@@ -81,11 +85,13 @@
 
 ### “I do not know”: Quantifying Uncertainty in Neural Network Based Approaches for Non-Intrusive Load Monitoring
 
-> In this paper, we explore the question - can we learn models that tell when they are unsure? Or, in other words, can we learn models that provide uncertainty estimates? We explore recent advances in uncertainty for NN(s), evaluate 14 model variants on the publicly available REDD dataset, and find that our models can accurately estimate uncertainty without compromising on traditional metrics. We also find that different appliances in their different states have varying performance of uncertainty. We also propose "recalibration" methods and find they can improve the uncertainty estimation. [[PDF](https://dl.acm.org/doi/abs/10.1145/3563357.3564063)] [[Jax](https://github.com/VibhutiBansal-11/NILM_Uncertainty/tree/master)] [2022] 
+>In this paper, we explore the question - can we learn models that tell when they are unsure? Or, in other words, can we learn models that provide uncertainty estimates? We explore recent advances in uncertainty for NN(s), evaluate 14 model variants on the publicly available REDD dataset, and find that our models can accurately estimate uncertainty without compromising on traditional metrics. We also find that different appliances in their different states have varying performance of uncertainty. We also propose "recalibration" methods and find they can improve the uncertainty estimation. [[PDF](https://dl.acm.org/doi/abs/10.1145/3563357.3564063)] [[Jax](https://github.com/VibhutiBansal-11/NILM_Uncertainty/tree/master)] [2022] 
 
 <p align="center">
     <img title="" src="./img/NILM_Uncertain_2023-11-27_11-42-34.jpg" alt="" width="1200" data-align="center">
 </p>
+
+
 
 ### Fed-GBM: a cost-effective federated gradient boosting tree for non-intrusive load monitoring
 
@@ -176,6 +182,16 @@
 
 <p align='center'>
     <img title="" src="./img/VAE-NILM.png" alt="" width="800" data-align="center">
+</p>
+
+
+
+### Sequence to point learning based on bidirectional dilated residual network for non-intrusive load monitoring
+
+> We propose a sequence to point learning based on bidirectional dilated convolution for NILM on low-frequency data, called BitcnNILM. We compare our method with existing algorithms on low-frequency data via REDD and UK-DALE datasets. Experiments show that the superiority of our BitcnNILM in both load disaggregation and load on/off identification. [[PDF](https://www.sciencedirect.com/science/article/pii/S0142061521000776)] [[Keras](https://github.com/linfengYang/BitcnNILM)] [2021]
+
+<p align='center'>
+    <img title="" src="./img/BitcnNILM_2023-11-27_14-55-50.jpg" alt="" width="800" data-align="center">
 </p>
 
 
