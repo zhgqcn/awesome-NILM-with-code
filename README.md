@@ -67,9 +67,17 @@
 
 > Non-intrusive Appliance Load Monitoring (NALM) aims to recognize individual appliance usage from the main meter without indoor sensors. However, existing systems struggle to balance dataset construction efficiency and event/state recognition accuracy, especially for low-power appliance recognition. This paper introduces Hawk, an efficient and accurate NALM system that operates in two stages: dataset construction and event recognition. In the data construction stage, we efficiently collect a balanced and diverse dataset, HawkDATA, based on balanced Gray code and enable automatic data annotations via a sampling synchronization strategy called shared perceptible time. During the event recognition stage, our algorithm pipeline integrates steady-state differential pre-processing and voting-based post-processing for accurate event recognition from the aggregate current. Experimental results show that HawkDATA takes only 1/71.5 of the collection time to collect 6.34x more appliance state combinations than the baseline. In HawkDATA and a widely used dataset, Hawk achieves an average F1 score of 93.94% for state recognition and 97.07% for event recognition, which is a 47.98% and 11.57% increase over SOTA algorithms. Furthermore, selected appliance subsets and the model trained from HawkDATA are deployed in two real-world scenarios with many unknown background appliances. The average F1 scores of event recognition are 96.02% and 94.76%. [[PDF](https://dl.acm.org/doi/pdf/10.1145/3666025.3699359)] [[Scikit](https://github.com/WZiJ/SenSys24-Hawk)] [SenSys 2024- Best AE Award] 
 
-![hawk](./img/20241110-nilm-Hawk.png)
+<p align="center">
+    <img title="" src="./img/20241110-nilm-Hawk.png" alt="" width="800" data-align="center">
+</p>
 
+### Graph-Based Dependency-Aware Non-Intrusive Load Monitoring
 
+> Non-intrusive load monitoring (NILM) is able to analyze and predict users’ power consumption behaviors for further improving the power consumption efficiency of the grid. Neural network-based techniques have been developed for NILM. However, the dependencies of multiple appliances working simultaneously were ignored or implicitly characterized in their models for disaggregation. To improve the performance of NILM, we employ a graph structure to explicitly characterize the temporal dependencies among different appliances. Specially, we consider the prior temporal knowledge between the appliances in the working state, construct a weighted adjacency matrix to represent their dependencies. We also introduce hard dependencies of each appliance to prevent the sparsity of the weighted adjacency matrix. Furthermore, the non-sequential dependencies are learned among appliances using a graph attention network based on the weighted adjacency matrix. An encoder-decoder architecture based on dilated convolutions is developed for power estimation and state detection at the same time. We demonstrate the proposed model on the UKDALE dataset, which outperforms several state-of-the-art results for NILM. [[PDF](https://dl.acm.org/doi/pdf/10.1145/3666025.3699359)] [[Pytorch](https://github.com/zhgqcn/GRAD-NILM/tree/main)] [PRCV 2023] 
+
+<p align="center">
+    <img title="" src="./img/GRAD-NILM.png" alt="" width="800" data-align="center">
+</p>
 
 ### MSDC: Exploiting Multi-State Power Consumption in Non-intrusive Load Monitoring based on A Dual-CNN Model 
 
