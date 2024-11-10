@@ -31,10 +31,10 @@
 
 |               Type                |                           Dataset                            |
 | :-------------------------------: | :----------------------------------------------------------: |
-|     **Residential datasets**      | [[UK-DALE](https://www.nature.com/articles/sdata20157)] [[REDD](https://energy.duke.edu/content/reference-energy-disaggregation-data-set-redd)] [[REFIT](https://pureportal.strath.ac.uk/en/datasets/refit-electrical-load-measurements-cleaned)] [[AMpds/2](http://ampds.org/)] [[Dataport](https://ieee-dataport.org/keywords/nilm)] [[ECO](http://www.vs.inf.ethz.ch/res/show.html?what=eco-data)] [[ENERTALK](https://www.nature.com/articles/s41597-019-0212-5)] [[iAWE](https://iawe.github.io/)] [[BLUED](http://portoalegre.andrew.cmu.edu:88/BLUED/)] [[PLAID](https://www.nature.com/articles/s41597-020-0389-7)] [[DRED](https://www.st.ewi.tudelft.nl/~akshay/dred/)] [[Georges Hebrail UCI](https://archive.ics.uci.edu/ml/datasets/individual%2Bhousehold%2Belectric%2Bpower%2Bconsumption)] [[GREEND](https://sourceforge.net/projects/greend/)] [[HES](https://randd.defra.gov.uk/ProjectDetails?ProjectID=17359&FromSearch=Y&Publisher=1&SearchText=EV0702&SortString=ProjectCode&SortOrder=Asc&Paging=10#Description)] [[TraceBase](https://github.com/areinhardt/tracebase)] [[IDEAL](https://www.nature.com/articles/s41597-021-00921-y)] |
-| **Commercial buildings datasets** | [[COMBED](https://combed.github.io/)] [[BLOND](https://www.nature.com/articles/sdata201848)] |
-|      **Industrial datasets**      | [[Industrial Machines Dataset](https://ieee-dataport.org/open-access/industrial-machines-dataset-electrical-load-disaggregation)] [[Aachen Smart Factory](http://www.finesce.eu/Trial_Site_Aachen.html)] [[HIPE](https://www.energystatusdata.kit.edu/hipe.php)] |
-|        **Synthetic Data**         | [[SynD](https://github.com/klemenjak/SynD/)] [[COLD](https://github.com/arx7ti/cold-nilm)] [[FIRED](https://github.com/voelkerb/FIRED_dataset_helper)] [[SHED](https://nilm.telecom-paristech.fr/shed/)] [[smartsim](https://github.com/sustainablecomputinglab/smartsim)] |
+|     **Residential datasets**      | [[UK-DALE](https://www.nature.com/articles/sdata20157)] <br />[[REDD](https://energy.duke.edu/content/reference-energy-disaggregation-data-set-redd)] <br />[[REFIT](https://pureportal.strath.ac.uk/en/datasets/refit-electrical-load-measurements-cleaned)] <br /> [[AMpds/2](http://ampds.org/)] <br />[[Dataport](https://ieee-dataport.org/keywords/nilm)] <br />[[ECO](http://www.vs.inf.ethz.ch/res/show.html?what=eco-data)] <br />[[ENERTALK](https://www.nature.com/articles/s41597-019-0212-5)] <br />[[iAWE](https://iawe.github.io/)] <br />[[BLUED](http://portoalegre.andrew.cmu.edu:88/BLUED/)] <br />[[PLAID](https://www.nature.com/articles/s41597-020-0389-7)] <br />[[DRED](https://www.st.ewi.tudelft.nl/~akshay/dred/)] <br />[[Georges Hebrail UCI](https://archive.ics.uci.edu/ml/datasets/individual%2Bhousehold%2Belectric%2Bpower%2Bconsumption)] <br />[[GREEND](https://sourceforge.net/projects/greend/)] <br />[[HES](https://randd.defra.gov.uk/ProjectDetails?ProjectID=17359&FromSearch=Y&Publisher=1&SearchText=EV0702&SortString=ProjectCode&SortOrder=Asc&Paging=10#Description)] <br />[[TraceBase](https://github.com/areinhardt/tracebase)] <br />[[IDEAL](https://www.nature.com/articles/s41597-021-00921-y)] <br />[[HawkDATA]](https://github.com/WZiJ/SenSys24-Hawk) |
+| **Commercial buildings datasets** | [[COMBED](https://combed.github.io/)] <br />[[BLOND](https://www.nature.com/articles/sdata201848)] |
+|      **Industrial datasets**      | [[Industrial Machines Dataset](https://ieee-dataport.org/open-access/industrial-machines-dataset-electrical-load-disaggregation)] <br />[[Aachen Smart Factory](http://www.finesce.eu/Trial_Site_Aachen.html)] <br />[[HIPE](https://www.energystatusdata.kit.edu/hipe.php)] |
+|        **Synthetic Data**         | [[SynD](https://github.com/klemenjak/SynD/)] <br />[[COLD](https://github.com/arx7ti/cold-nilm)] <br />[[FIRED](https://github.com/voelkerb/FIRED_dataset_helper)] <br />[[SHED](https://nilm.telecom-paristech.fr/shed/)] <br />[[smartsim](https://github.com/sustainablecomputinglab/smartsim)] |
 
 
 
@@ -62,6 +62,14 @@
  
 
 ## 🟩Methods
+
+### Hawk: An Efficient NALM System for Accurate Low-Power Appliance Recognition
+
+> Non-intrusive Appliance Load Monitoring (NALM) aims to recognize individual appliance usage from the main meter without indoor sensors. However, existing systems struggle to balance dataset construction efficiency and event/state recognition accuracy, especially for low-power appliance recognition. This paper introduces Hawk, an efficient and accurate NALM system that operates in two stages: dataset construction and event recognition. In the data construction stage, we efficiently collect a balanced and diverse dataset, HawkDATA, based on balanced Gray code and enable automatic data annotations via a sampling synchronization strategy called shared perceptible time. During the event recognition stage, our algorithm pipeline integrates steady-state differential pre-processing and voting-based post-processing for accurate event recognition from the aggregate current. Experimental results show that HawkDATA takes only 1/71.5 of the collection time to collect 6.34x more appliance state combinations than the baseline. In HawkDATA and a widely used dataset, Hawk achieves an average F1 score of 93.94% for state recognition and 97.07% for event recognition, which is a 47.98% and 11.57% increase over SOTA algorithms. Furthermore, selected appliance subsets and the model trained from HawkDATA are deployed in two real-world scenarios with many unknown background appliances. The average F1 scores of event recognition are 96.02% and 94.76%. [[PDF](https://dl.acm.org/doi/pdf/10.1145/3666025.3699359)] [[Scikit](https://github.com/WZiJ/SenSys24-Hawk)] [SenSys 2024- Best AE Award] 
+
+![hawk](./img/20241110-nilm-Hawk.png)
+
+
 
 ### MSDC: Exploiting Multi-State Power Consumption in Non-intrusive Load Monitoring based on A Dual-CNN Model 
 
@@ -382,6 +390,5 @@
 <p align='center'>
     <img title="" src="./img/neural-nilm.png" alt="" data-align="center">
 </p>
-
 
 
