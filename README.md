@@ -1,453 +1,654 @@
-# 🌟awesome-NILM-with-code
+<div align="center">
 
-> **A repository of awesome Non-Intrusive Load Monitoring (NILM) with code** 
->
+# 🌟 awesome-NILM-with-code
+
+**A curated list of Non-Intrusive Load Monitoring (NILM) papers — every entry ships with code.**
+
 > 😸 Welcome valuable opinions from researchers in the same direction
 
-<p align="center">
-    <a href="https://github.com/zhgqcn/awesome-NILM-with-code/stargazers"><img src="https://img.shields.io/github/stars/zhgqcn/awesome-NILM-with-code.svg?style=flat-square&logo=github" alt="Stars"/></a>
-    <a href="https://github.com/zhgqcn/awesome-NILM-with-code/network/members"><img src="https://img.shields.io/github/forks/zhgqcn/awesome-NILM-with-code.svg?style=flat-square&logo=github" alt="Forks"/></a>
-    <a href="./LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg?style=flat-square" alt="License"/></a>
-    <a href="#-papers"><img src="https://img.shields.io/badge/papers-30%2B-green.svg?style=flat-square" alt="Papers"/></a>
-</p>
+[![Stars](https://img.shields.io/github/stars/zhgqcn/awesome-NILM-with-code.svg?style=flat-square&logo=github)](https://github.com/zhgqcn/awesome-NILM-with-code/stargazers)
+[![Forks](https://img.shields.io/github/forks/zhgqcn/awesome-NILM-with-code.svg?style=flat-square&logo=github)](https://github.com/zhgqcn/awesome-NILM-with-code/network/members)
+[![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg?style=flat-square)](./LICENSE)
+[![Papers](https://img.shields.io/badge/papers-30%2B-green.svg?style=flat-square)](#-papers)
+[![Updated](https://img.shields.io/badge/updated-2026--09-brightgreen.svg?style=flat-square)](#-recent-updates)
+
+</div>
+
+---
 
 ## 📑 Contents
 
-- [Toolkits](#️toolkits)
-- [Conference](#-conference)
-- [Datasets](#-datasets)
-- [Papers](#-papers)
-  - [Reviews](#-reviews)
-  - [Deployment](#-deployment)
-  - [Methods](#-methods)
+| | |
+| :--- | :--- |
+| 🧰 [Toolkits](#-toolkits) | 🏫 [Conferences](#-conferences) |
+| 📊 [Datasets](#-datasets) | 📄 [Papers](#-papers) |
+| 🆕 [2025 – 2026](#-2025--2026) | 📆 [2023 – 2024](#-2023--2024) |
+| 📂 [2020 – 2022](#-2020--2022) | 🏛️ [Classics · 2015 – 2019](#-classics--2015--2019) |
+| 📚 [Reviews](#-reviews) | 🚀 [Deployment](#-deployment) |
+| 🔥 [Recent Updates](#-recent-updates) | ⭐ [Star History](#-star-history) |
+
+> 💡 **Reading guide** — every paper is a *card*: a title, one summary paragraph, and badge links to the **paper** and the **code**. Older work is folded into collapsible year blocks so the front page stays scannable — click a year to expand it.
+
+---
 
 ## 🔥 Recent Updates
 
-- **2026-09**: Added MSDCANet (DSP 2026), DualNILM (PV-injection aware NILM), NILMFormer (KDD 2025), training-free LLM-based NILM, diffusion-model-based data augmentation (Energy 2025), MATNilm, and a Tsetlin Machine NILM system for MCUs; fixed broken links (MSDC, GRAD-NILM, attention-NILM, HawkDATA); added CC BY 4.0 license.
+| Date | Change |
+| :--- | :--- |
+| **2026-09** | 📦 Redesigned README into **modular, year-grouped cards** with badge links; older entries folded into collapsible year blocks. <br> 🆕 Added **MSDCANet** (DSP 2026), **DualNILM** (PV-injection aware), **NILMFormer** (KDD 2025), **training-free LLM NILM**, **diffusion-based augmentation** (Energy 2025), **MATNilm**, **Tsetlin Machine NILM on MCUs** (2026). <br> 🐛 Fixed broken links: MSDC (Google redirect ⇒ AAAI official), GRAD-NILM PDF, attention-NILM code, HawkDATA, nilmworkshop. <br> 🧹 De-duplicated the federated-learning survey entry and added the CC BY 4.0 license. |
 
+---
 
+# 🧰 Toolkits
 
-# 🛠️Toolkits
+| Toolkit | Summary | Stack | Links |
+| :--- | :--- | :--- | :--- |
+| **NILMTK** | The de-facto standard NILM toolkit: dataset parsers, benchmarking API and statistics | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) | [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square)](https://arxiv.org/pdf/1404.3878v1.pdf) [![Code](https://img.shields.io/badge/Code-GitHub-181717?style=flat-square&logo=github)](https://github.com/nilmtk/nilmtk) |
+| **NILMTK-Contrib** | Community extensions and reference implementations for NILMTK | ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white) | [![Paper](https://img.shields.io/badge/Paper-ACM-01689E?style=flat-square)](https://dl.acm.org/doi/10.1145/3360322.3360844) [![Model](https://img.shields.io/badge/Model-BuildSys-2d8cf0?style=flat-square)](https://nipunbatra.github.io/papers/2021/buildsys.pdf) [![Code](https://img.shields.io/badge/Code-GitHub-181717?style=flat-square&logo=github)](https://github.com/nilmtk/nilmtk-contrib) |
+| **NILM-Eval** | Reproducible evaluation framework and baseline algorithms | ![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=flat-square&logo=mathworks&logoColor=white) | [![Code](https://img.shields.io/badge/Code-GitHub-181717?style=flat-square&logo=github)](https://github.com/beckel/nilm-eval) |
+| **Torch-NILM** | Benchmarking suite for deep learning models in energy disaggregation | ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) | [![Paper](https://img.shields.io/badge/Paper-MDPI-00A0DD?style=flat-square)](https://www.mdpi.com/1996-1073/15/7/2647) [![Code](https://img.shields.io/badge/Code-GitHub-181717?style=flat-square&logo=github)](https://github.com/Virtsionis/torch-nilm) |
+| **Deep-NILMtk** | Modular deep learning NILM toolbox (PyTorch + TensorFlow models) | ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white) | [![Paper](https://img.shields.io/badge/Paper-NILM%20Workshop-6f42c1?style=flat-square)](http://nilmworkshop.org/2022/proceedings/nilm22-final4.pdf) [![PyTorch](https://img.shields.io/badge/PyTorch-models-EE4C2C?style=flat-square)](https://github.com/BHafsa/deep-nilmtk-v1/tree/master/deep_nilmtk/models/pytorch) [![TensorFlow](https://img.shields.io/badge/TensorFlow-models-FF6F00?style=flat-square)](https://github.com/BHafsa/deep-nilmtk-v1/tree/master/deep_nilmtk/models/tensorflow) |
+| **nilmtk-ukdale** | Exploratory data analysis pipeline for UK-DALE | ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) | [![Code](https://img.shields.io/badge/Code-GitHub-181717?style=flat-square&logo=github)](https://github.com/kehkok/nilmtk-ukdale) |
+| **NeuralNILM_Pytorch** | PyTorch re-implementation of *Neural NILM* | ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) | [![Code](https://img.shields.io/badge/Code-GitHub-181717?style=flat-square&logo=github)](https://github.com/Ming-er/NeuralNILM_Pytorch) |
+| **nilm_analyzer** | Disaggregation result inspection and error-analysis utilities | ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) | [![Code](https://img.shields.io/badge/Code-GitHub-181717?style=flat-square&logo=github)](https://github.com/mahnoor-shahid/nilm_analyzer) |
 
-- NILMTK: Non-Intrusive Load Monitoring Toolkit [[PDF](https://arxiv.org/pdf/1404.3878v1.pdf)] [[CODE](https://github.com/nilmtk/nilmtk)]
-- NILMTK-Contrib [[PDF](https://dl.acm.org/doi/10.1145/3360322.3360844)] [[Model](https://nipunbatra.github.io/papers/2021/buildsys.pdf)] [[Tensorflow](https://github.com/nilmtk/nilmtk-contrib)]
-- NILM-Eval [[Matlab](https://github.com/beckel/nilm-eval)]
-- Torch-NILM [[PDF](https://www.mdpi.com/1996-1073/15/7/2647)] [[Pytorch](https://github.com/Virtsionis/torch-nilm)]
-- Deep-NILMtk [[PDF](http://nilmworkshop.org/2022/proceedings/nilm22-final4.pdf)] [[Pytorch](https://github.com/BHafsa/deep-nilmtk-v1/tree/master/deep_nilmtk/models/pytorch)] [[Tensorflow](https://github.com/BHafsa/deep-nilmtk-v1/tree/master/deep_nilmtk/models/tensorflow)]
-- nilmtk-ukdale: Exploratory Data Analysis [[Pytorch](https://github.com/kehkok/nilmtk-ukdale)]
-- NeuralNILM_Pytorch [[Pytorch](https://github.com/Ming-er/NeuralNILM_Pytorch)] 
-- nilm_analyzer [[Pytorch](https://github.com/mahnoor-shahid/nilm_analyzer)] 
+---
 
+# 🏫 Conferences
 
+| Venue | Link |
+| :--- | :--- |
+| 🗞️ **Energy Informatics** | [![Site](https://img.shields.io/badge/Springer-Energy%20Informatics-2d8cf0?style=flat-square)](https://energyinformatics.springeropen.com/) |
+| 🗞️ **NILM Workshop** (annual) | [![Site](https://img.shields.io/badge/nilmworkshop.org-homepage-6f42c1?style=flat-square)](https://nilmworkshop.org/) [![Repo](https://img.shields.io/badge/GitHub-site%20source-181717?style=flat-square&logo=github)](https://github.com/smakonin/nilmworkshop.org) |
+| 🗞️ **ICPERE 2022** | [![Site](https://img.shields.io/badge/icpere2022-official-2d8cf0?style=flat-square)](http://icpere2022.com/) |
 
-# 🧑‍🤝‍🧑Conference
+---
 
-- [Energy Informatics](https://energyinformatics.springeropen.com/)
-- [International Workshop on Non-Intrusive Load Monitoring](https://nilmworkshop.org/) [[nilmworkshop.org](https://github.com/smakonin/nilmworkshop.org)] 
-- [International Conference on Power Engineering and Renewable Energy (ICPERE)](http://icpere2022.com/)
+# 📊 Datasets
 
+<details>
+<summary><b>🏠 Residential datasets (17)</b></summary>
+<br>
 
+[UK-DALE](https://www.nature.com/articles/sdata20157) · [REDD](https://energy.duke.edu/content/reference-energy-disaggregation-data-set-redd) · [REFIT](https://pureportal.strath.ac.uk/en/datasets/refit-electrical-load-measurements-cleaned) · [AMPds/2](http://ampds.org/) · [Dataport](https://ieee-dataport.org/keywords/nilm) · [ECO](http://www.vs.inf.ethz.ch/res/show.html?what=eco-data) · [ENERTALK](https://www.nature.com/articles/s41597-019-0212-5) · [iAWE](https://iawe.github.io/) · [BLUED](http://portoalegre.andrew.cmu.edu:88/BLUED/) · [PLAID](https://www.nature.com/articles/s41597-020-0389-7) · [DRED](https://www.st.ewi.tudelft.nl/~akshay/dred/) · [Georges Hebrail (UCI)](https://archive.ics.uci.edu/ml/datasets/individual%2Bhousehold%2Belectric%2Bpower%2Bconsumption) · [GREEND](https://sourceforge.net/projects/greend/) · [HES](https://randd.defra.gov.uk/ProjectDetails?ProjectID=17359&FromSearch=Y&Publisher=1&SearchText=EV0702&SortString=ProjectCode&SortOrder=Asc&Paging=10#Description) · [TraceBase](https://github.com/areinhardt/tracebase) · [IDEAL](https://www.nature.com/articles/s41597-021-00921-y) · [HawkDATA](https://github.com/WZiJ/SenSys24-Hawk)
 
-# 📊Datasets
+</details>
 
-|               Type                |                           Dataset                            |
-| :-------------------------------: | :----------------------------------------------------------: |
-|     **Residential datasets**      | [[UK-DALE](https://www.nature.com/articles/sdata20157)] <br />[[REDD](https://energy.duke.edu/content/reference-energy-disaggregation-data-set-redd)] <br />[[REFIT](https://pureportal.strath.ac.uk/en/datasets/refit-electrical-load-measurements-cleaned)] <br /> [[AMpds/2](http://ampds.org/)] <br />[[Dataport](https://ieee-dataport.org/keywords/nilm)] <br />[[ECO](http://www.vs.inf.ethz.ch/res/show.html?what=eco-data)] <br />[[ENERTALK](https://www.nature.com/articles/s41597-019-0212-5)] <br />[[iAWE](https://iawe.github.io/)] <br />[[BLUED](http://portoalegre.andrew.cmu.edu:88/BLUED/)] <br />[[PLAID](https://www.nature.com/articles/s41597-020-0389-7)] <br />[[DRED](https://www.st.ewi.tudelft.nl/~akshay/dred/)] <br />[[Georges Hebrail UCI](https://archive.ics.uci.edu/ml/datasets/individual%2Bhousehold%2Belectric%2Bpower%2Bconsumption)] <br />[[GREEND](https://sourceforge.net/projects/greend/)] <br />[[HES](https://randd.defra.gov.uk/ProjectDetails?ProjectID=17359&FromSearch=Y&Publisher=1&SearchText=EV0702&SortString=ProjectCode&SortOrder=Asc&Paging=10#Description)] <br />[[TraceBase](https://github.com/areinhardt/tracebase)] <br />[[IDEAL](https://www.nature.com/articles/s41597-021-00921-y)] <br />[[HawkDATA](https://github.com/WZiJ/SenSys24-Hawk)] |
-| **Commercial buildings datasets** | [[COMBED](https://combed.github.io/)] <br />[[BLOND](https://www.nature.com/articles/sdata201848)] |
-|      **Industrial datasets**      | [[Industrial Machines Dataset](https://ieee-dataport.org/open-access/industrial-machines-dataset-electrical-load-disaggregation)] <br />[[Aachen Smart Factory](http://www.finesce.eu/Trial_Site_Aachen.html)] <br />[[HIPE](https://www.energystatusdata.kit.edu/hipe.php)] |
-|        **Synthetic Data**         | [[SynD](https://github.com/klemenjak/SynD/)] <br />[[COLD](https://github.com/arx7ti/cold-nilm)] <br />[[FIRED](https://github.com/voelkerb/FIRED_dataset_helper)] <br />[[SHED](https://nilm.telecom-paristech.fr/shed/)] <br />[[smartsim](https://github.com/sustainablecomputinglab/smartsim)] |
+<details>
+<summary><b>🏢 Commercial buildings datasets (2)</b></summary>
+<br>
 
+[COMBED](https://combed.github.io/) · [BLOND](https://www.nature.com/articles/sdata201848)
 
+</details>
 
-# 📄Papers
+<details>
+<summary><b>🏭 Industrial datasets (3)</b></summary>
+<br>
 
-## 🟦Reviews
+[Industrial Machines Dataset](https://ieee-dataport.org/open-access/industrial-machines-dataset-electrical-load-disaggregation) · [Aachen Smart Factory](http://www.finesce.eu/Trial_Site_Aachen.html) · [HIPE](https://www.energystatusdata.kit.edu/hipe.php)
 
-- Neural Load Disaggregation: Meta-Analysis, Federated Learning and Beyond [[PDF](https://www.mdpi.com/1996-1073/16/2/991)] [[Pytorch](https://github.com/BHafsa/FL-NILM)] [2023] 
+</details>
 
-- Non-Intrusive Load Monitoring: A Review [[PDF](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9820770)] [[Tensorflow](https://github.com/pascme05/BaseNILM)] [2022]
+<details>
+<summary><b>🧪 Synthetic data generators (5)</b></summary>
+<br>
 
-- NILM applications: Literature review of learning approaches, recent developments and challenges [[PDF](https://www.sciencedirect.com/science/article/abs/pii/S0378778822001220)] [2022]
+[SynD](https://github.com/klemenjak/SynD/) · [COLD](https://github.com/arx7ti/cold-nilm) · [FIRED](https://github.com/voelkerb/FIRED_dataset_helper) · [SHED](https://nilm.telecom-paristech.fr/shed/) · [smartsim](https://github.com/sustainablecomputinglab/smartsim)
 
-- Review on Deep Neural Networks Applied to Low-Frequency NILM [[PDF](https://www.mdpi.com/1996-1073/14/9/2390)] [2021]
+</details>
 
+---
 
+# 📄 Papers
 
-## 🟧Deployment
+## 🆕 2025 – 2026
 
-- A Real-Time Tsetlin Machine-based Non-intrusive Load Monitoring System on MCUs: reformulates NILM as a Boolean classification task solved by a Tsetlin Machine, achieving 90% precision / 96% recall for two-appliance classification on REDD with only 18 KB of flash and 0.43 ms inference latency on an ESP32, enabling privacy-preserving on-device NILM [[PDF](https://arxiv.org/abs/2608.18780)] [[CODE](https://github.com/wuhanstudio/nilm)] [2026]
+> 🔥 The newest wave: **non-stationarity-aware Transformers**, **LLMs with zero training**, **diffusion augmentation**, **multi-scale attention** and **PV injection-aware disaggregation**.
 
-- Energy Management Using Real-Time Non-Intrusive Load Monitoring [[Arduino and Raspberry Pi-based](https://github.com/goruck/nilm)] 
+### 📌 MSDCANet: A Multi-Scale Dual-Channel Convolutional Attention Network for Non-Intrusive Load Disaggregation
 
-- flask-NILM-app-v1 [[Flask](https://github.com/Selim321/flask-NILM-app-v1)] 
-- Inverse Decomposition of Energy Consumption [[C++](https://github.com/mieskolainen/IDEC)] 
+> Most deep NILM models rely on single-scale features and ignore the multi-scale variations caused by appliance mode transitions, which leads to overfitting and to poor separation of similar appliances. MSDCANet integrates multi-scale feature extraction, adaptive normalization and a multi-scale attention mechanism. On UK-DALE and REDD it beats SotA on MAE / SAE / F1 for several high-energy appliances, under both origin-household and cross-household evaluation.
 
- 
+![Venue](https://img.shields.io/badge/Digital%20Signal%20Processing-2026-blue?style=flat-square)
+![Task](https://img.shields.io/badge/Task-regression%20%2B%20state-4caf50?style=flat-square)
 
-## 🟩Methods
+[![Paper](https://img.shields.io/badge/Paper-DOI-orange?style=flat-square)](https://doi.org/10.1016/j.dsp.2025.105605)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/linfengYang/MSDCANet)
 
-### MSDCANet: A multi-scale dual-channel convolutional attention network for non-intrusive load disaggregation with enhanced feature extraction
+---
 
-> Most deep NILM models rely on single-scale features, overlooking the multi-scale variations in power data caused by operational mode transitions, which may lead to overfitting and hinder differentiation of appliances with similar patterns. MSDCANet integrates multi-scale feature extraction, adaptive normalization and a multi-scale attention mechanism to extract and fuse features at various scales, enhancing disaggregation accuracy and generalization. Evaluated under origin-household and cross-household paradigms on UK-DALE and REDD, it outperforms state-of-the-art models in MAE, SAE and F1 for several high-energy-consuming appliances. [[PDF](https://doi.org/10.1016/j.dsp.2025.105605)] [[Pytorch](https://github.com/linfengYang/MSDCANet)] [2026] [Digital Signal Processing]
+### 📌 DualNILM: Energy Injection Identification Enabled Disaggregation with Deep Multi-Task Learning
 
-### DualNILM: Energy Injection Identification enabled Disaggregation with Deep Multi-Task Learning
+> Behind-the-meter PV generation breaks NILM's non-negativity assumption — once injection exceeds consumption, disaggregation becomes a severely under-constrained inverse problem. DualNILM is a Transformer-based multi-task framework that unifies sequence-to-point state detection with sequence-to-sequence energy-injection estimation over multi-channel signatures. The authors also release **PV-augmented REDD and UK-DALE** with realistic weather data.
 
-> Behind-the-meter (BTM) PV generation breaks the non-negativity assumption of conventional NILM: when generation exceeds consumption, disaggregation turns into a severely under-constrained inverse problem. DualNILM is a Transformer-based multi-task framework that unifies sequence-to-point learning for appliance state detection with sequence-to-sequence modeling for continuous energy injection estimation, processing multi-channel signatures (active power, reactive power, etc.) with a dynamic attention mechanism. The authors also release PV-augmented versions of REDD and UK-DALE with realistic weather data. [[PDF](https://arxiv.org/abs/2508.14600)] [[CODE](https://github.com/MathAdventurer/PV-Augmented-NILM-Datasets)] [2025]
+![Venue](https://img.shields.io/badge/arXiv-2025-b31b1b?style=flat-square)
+![Topic](https://img.shields.io/badge/PV%20%2F%20prosumer-ready-ffca28?style=flat-square)
 
-### NILMFormer: Non-Intrusive Load Monitoring that Accounts for Non-Stationarity
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square)](https://arxiv.org/abs/2508.14600)
+[![Datasets + Code](https://img.shields.io/badge/Datasets%20%2B%20Code-GitHub-181717?style=flat-square&logo=github)](https://github.com/MathAdventurer/PV-Augmented-NILM-Datasets)
 
-> Current state-of-the-art NILM solutions process household consumption in subsequences, but the non-stationary nature of real-world smart meter data leads to distribution drift within each window, which severely affects model performance. NILMFormer is a sequence-to-sequence Transformer-based architecture that incorporates a new subsequence stationarization/de-stationarization scheme to mitigate the drift, and a novel positional encoding relying only on the subsequence's timestamp information. Experiments on 4 real-world datasets show that it significantly outperforms SotA approaches. It has been deployed as the backbone algorithm of EDF's (Electricité de France) consumption monitoring service, delivering detailed appliance-level insights to millions of customers. [[PDF](https://arxiv.org/abs/2506.05880)] [[Pytorch](https://github.com/adrienpetralia/NILMFormer)] [KDD 2025]
+---
 
-### Prompting Large Language Models for Training-Free Non-Intrusive Load Monitoring
+### 📌 NILMFormer: Non-Intrusive Load Monitoring that Accounts for Non-Stationarity
 
-> The first prompt-based NILM framework that leverages large language models (LLMs) with in-context learning. Prompt strategies integrate appliance features, timestamps and contextual information, as well as representative time-series examples. On REDD and UK-DALE, LLMs guided solely by prompts deliver competitive state detection accuracy (average F1-score of 0.676 on unseen households) and demonstrate robust generalization across houses and even regions without any fine-tuning, while providing clear, human-readable explanations for the inferred appliance states. [[PDF](https://arxiv.org/abs/2505.06330)] [[CODE](https://github.com/SusCom-Lab/llm-for-nilm)] [2025]
+> SotA methods slice household consumption into subsequences, but real smart-meter data is **non-stationary** — distribution drift inside each window wrecks model performance. NILMFormer is a seq2seq Transformer with a subsequence stationarization / de-stationarization scheme plus positional encoding that relies only on timestamp information. It was validated on four real-world datasets and has been deployed as the backbone of **EDF's (Électricité de France) consumption monitoring service**, serving millions of customers.
 
-### A diffusion model-based framework to enhance the robustness of non-intrusive load disaggregation
+![Venue](https://img.shields.io/badge/KDD-2025-blueviolet?style=flat-square)
+![Deployed](https://img.shields.io/badge/industrial%20deployment-EDF-brightgreen?style=flat-square)
 
-> Existing NILM models require substantial labeled data, and existing datasets often contain significant noise. This work proposes a NILM data augmentation architecture based on diffusion models: the diffusion model is optimized to generate multi-state, low-noise load data, and synthetic data mixed with the original data improves disaggregation ability while reducing the need for large training sets. A tailored loss function and post-processing algorithm further enhance noise resistance and decomposition stability, significantly improving MAE, SAE and F1 in both origin-household and cross-household scenarios. [[PDF](https://www.sciencedirect.com/science/article/pii/S0360544225010655)] [[Pytorch](https://github.com/linfengYang/DiffusionModel_NILM)] [2025] [Energy]
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square)](https://arxiv.org/abs/2506.05880)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/adrienpetralia/NILMFormer)
 
-### Hawk: An Efficient NALM System for Accurate Low-Power Appliance Recognition
+---
 
-> Non-intrusive Appliance Load Monitoring (NALM) aims to recognize individual appliance usage from the main meter without indoor sensors. However, existing systems struggle to balance dataset construction efficiency and event/state recognition accuracy, especially for low-power appliance recognition. This paper introduces Hawk, an efficient and accurate NALM system that operates in two stages: dataset construction and event recognition. In the data construction stage, we efficiently collect a balanced and diverse dataset, HawkDATA, based on balanced Gray code and enable automatic data annotations via a sampling synchronization strategy called shared perceptible time. During the event recognition stage, our algorithm pipeline integrates steady-state differential pre-processing and voting-based post-processing for accurate event recognition from the aggregate current. Experimental results show that HawkDATA takes only 1/71.5 of the collection time to collect 6.34x more appliance state combinations than the baseline. In HawkDATA and a widely used dataset, Hawk achieves an average F1 score of 93.94% for state recognition and 97.07% for event recognition, which is a 47.98% and 11.57% increase over SOTA algorithms. Furthermore, selected appliance subsets and the model trained from HawkDATA are deployed in two real-world scenarios with many unknown background appliances. The average F1 scores of event recognition are 96.02% and 94.76%. [[PDF](https://dl.acm.org/doi/pdf/10.1145/3666025.3699359)] [[Scikit](https://github.com/WZiJ/SenSys24-Hawk)] [SenSys 2024- Best AE Award] 
+### 📌 Prompting Large Language Models for Training-Free Non-Intrusive Load Monitoring
 
-<p align="center">
-    <img title="" src="./img/20241110-nilm-Hawk.png" alt="" width="800" data-align="center">
-</p>
+> The first prompt-based NILM framework: it drives LLMs purely through in-context learning, injecting appliance features, timestamps, contextual hints and representative time-series examples into the prompt. Guided by prompts alone, LLMs reach a competitive 0.676 average F1 on unseen REDD households, generalise across houses and even regions without fine-tuning, and emit human-readable explanations for the states they infer.
 
-### Graph-Based Dependency-Aware Non-Intrusive Load Monitoring
+![Venue](https://img.shields.io/badge/arXiv-2025-b31b1b?style=flat-square)
+![Topic](https://img.shields.io/badge/LLM%20%2F%20zero--shot-00b8a9?style=flat-square)
 
-> Non-intrusive load monitoring (NILM) is able to analyze and predict users’ power consumption behaviors for further improving the power consumption efficiency of the grid. Neural network-based techniques have been developed for NILM. However, the dependencies of multiple appliances working simultaneously were ignored or implicitly characterized in their models for disaggregation. To improve the performance of NILM, we employ a graph structure to explicitly characterize the temporal dependencies among different appliances. Specially, we consider the prior temporal knowledge between the appliances in the working state, construct a weighted adjacency matrix to represent their dependencies. We also introduce hard dependencies of each appliance to prevent the sparsity of the weighted adjacency matrix. Furthermore, the non-sequential dependencies are learned among appliances using a graph attention network based on the weighted adjacency matrix. An encoder-decoder architecture based on dilated convolutions is developed for power estimation and state detection at the same time. We demonstrate the proposed model on the UKDALE dataset, which outperforms several state-of-the-art results for NILM. [[PDF](https://link.springer.com/chapter/10.1007/978-981-99-8549-4_8)] [[Pytorch](https://github.com/zhgqcn/GRAD-NILM/tree/main)] [PRCV 2023]
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square)](https://arxiv.org/abs/2505.06330)
+[![Code](https://img.shields.io/badge/Code-GitHub-181717?style=flat-square&logo=github)](https://github.com/SusCom-Lab/llm-for-nilm)
 
-<p align="center">
-    <img title="" src="./img/GRAD-NILM.png" alt="" width="800" data-align="center">
-</p>
+---
 
-### MSDC: Exploiting Multi-State Power Consumption in Non-intrusive Load Monitoring based on A Dual-CNN Model 
+### 📌 A Diffusion Model-Based Framework to Enhance the Robustness of Non-Intrusive Load Disaggregation
 
-> Leveraging recent progress on deep learning techniques, we design a new neural NILM model Multi-State Dual CNN (MSDC). Different from previous models, MSDC explicitly extracts information about the appliance’s multiple states and state transitions, which in turn regulates the prediction of signals for appliances. More specifically, we employ a dual-CNN architecture: one CNN for outputting state distributions and the other for predicting the power of each state. A new technique is invented that utilizes conditional random fields (CRF) to capture state transitions. Experiments on two real-world datasets REDD and UK-DALE demonstrate that our model significantly outperform state-of-the-art models. [[PDF]([google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwj85ozrnuOCAxXvxDgGHSwyAFsQFnoECA8QAQ&url=https%3A%2F%2Fojs.aaai.org%2Findex.php%2FAAAI%2Farticle%2Fview%2F25636%2F25408&usg=AOvVaw3CWVhzVChy8RvEEYHyHi8c&opi=89978449](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwj85ozrnuOCAxXvxDgGHSwyAFsQFnoECA8QAQ&url=https%3A%2F%2Fojs.aaai.org%2Findex.php%2FAAAI%2Farticle%2Fview%2F25636%2F25408&usg=AOvVaw3CWVhzVChy8RvEEYHyHi8c&opi=89978449)) ] [[Pytorch](https://github.com/sub-paper/MSDC-NILM)] [2023] [AAAI]
+> Existing NILM models need a lot of labels, yet public datasets are noisy. This work augments training data with a diffusion model tuned to generate multi-state, low-noise load signatures; mixing synthetic with real data improves disaggregation while shrinking the required training set. A tailored loss function and post-processing step further raise noise resistance, improving MAE / SAE / F1 in both intra- and cross-household scenarios.
 
-<p align="center">
-    <img title="" src="./img/MSDC-NILM_2023-11-27_11-33-35.jpg" alt="" width="800" data-align="center">
-</p>
+![Venue](https://img.shields.io/badge/Energy-2025-blue?style=flat-square)
+![Topic](https://img.shields.io/badge/data%20augmentation-purple?style=flat-square)
 
-### MATNilm: Multi-appliance-task Non-intrusive Load Monitoring with Limited Labeled Data
+[![Paper](https://img.shields.io/badge/Paper-ScienceDirect-orange?style=flat-square)](https://www.sciencedirect.com/science/article/pii/S0360544225010655)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/linfengYang/DiffusionModel_NILM)
 
-> Existing approaches mainly develop an individual model for each appliance, typically relying on a large amount of household-labeled data which is hard to collect. MATNilm proposes a multi-appliance-task framework with a training-efficient sample augmentation (SA) scheme: a shared-hierarchical split structure handles the regression and classification tasks of each appliance, and a two-dimensional attention mechanism captures spatio-temporal correlations among all appliances. With only one-day training data and limited appliance operation profiles, the SA algorithm achieves test performance comparable to training on the full dataset; relative errors are reduced by more than 50% on average. [[PDF](https://arxiv.org/abs/2307.14778)] [[Pytorch](https://github.com/jxiong22/MATNilm)] [2023]
+---
 
+<details>
+<summary><b>📆 2023 – 2024</b></summary>
+<br>
 
+### 📌 Hawk: An Efficient NALM System for Accurate Low-Power Appliance Recognition
 
-### Neural Load Disaggregation: Meta-Analysis, Federated Learning and Beyond
+> Non-intrusive Appliance Load Monitoring recognises individual appliance usage from the main meter with no indoor sensors, but existing systems trade dataset-construction cost against recognition accuracy — especially for low-power appliances. Hawk runs in two stages: it builds **HawkDATA**, a balanced and diverse dataset collected via balanced Gray code and auto-annotated through a *shared perceptible time* synchronisation strategy (1/71.5 of the collection time, 6.34× more state combinations than the baseline), then recognises events with steady-state differential pre-processing plus voting-based post-processing. Average F1: **93.94% state / 97.07% event** recognition (+47.98% / +11.57% over SotA), and deployment in two real-world scenarios with unseen background appliances reached 96.02% and 94.76% event F1.
 
-> This paper emphasizes federated neural NILM, receiving increasing attention due to its ability to preserve end-users’ privacy. Typically, by combining several locally trained models, federated learning has excellent potential to train NILM models locally without communicating sensitive data with cloud servers. [[PDF](https://www.mdpi.com/1996-1073/16/2/991)] [[Pytorch](https://github.com/BHafsa/FL-NILM)] [2023]
+![Venue](https://img.shields.io/badge/SenSys-2024-blueviolet?style=flat-square)
+![Award](https://img.shields.io/badge/Best%20AE%20Award-gold?style=flat-square)
 
-<p align="center">
-    <img title="" src="./img/FL-NILIM-survey.png" alt="" width="800" data-align="center">
-</p>
+[![Paper](https://img.shields.io/badge/Paper-ACM%20DL-01689E?style=flat-square)](https://dl.acm.org/doi/pdf/10.1145/3666025.3699359)
+[![Data + Code](https://img.shields.io/badge/HawkDATA-GitHub-181717?style=flat-square&logo=github)](https://github.com/WZiJ/SenSys24-Hawk)
 
+<p align="center"><img src="./img/20241110-nilm-Hawk.png" alt="Hawk" width="800"></p>
 
+---
 
-### “I do not know”: Quantifying Uncertainty in Neural Network Based Approaches for Non-Intrusive Load Monitoring
+### 📌 MATNilm: Multi-Appliance-Task Non-Intrusive Load Monitoring with Limited Labeled Data
 
->In this paper, we explore the question - can we learn models that tell when they are unsure? Or, in other words, can we learn models that provide uncertainty estimates? We explore recent advances in uncertainty for NN(s), evaluate 14 model variants on the publicly available REDD dataset, and find that our models can accurately estimate uncertainty without compromising on traditional metrics. We also find that different appliances in their different states have varying performance of uncertainty. We also propose "recalibration" methods and find they can improve the uncertainty estimation. [[PDF](https://dl.acm.org/doi/abs/10.1145/3563357.3564063)] [[Jax](https://github.com/VibhutiBansal-11/NILM_Uncertainty/tree/master)] [2022] 
+> Instead of training one model per appliance on huge labelled corpora, MATNilm proposes a multi-appliance-task framework with a training-efficient **sample augmentation (SA)** scheme: a shared-hierarchical split structure handles regression and classification for each appliance, and a two-dimensional attention mechanism captures spatio-temporal correlations across all of them. With only **one day** of training data, test performance becomes comparable to training on the full dataset, and relative errors drop by more than 50% on average.
 
-<p align="center">
-    <img title="" src="./img/NILM_Uncertain_2023-11-27_11-42-34.jpg" alt="" width="1200" data-align="center">
-</p>
+![Venue](https://img.shields.io/badge/arXiv-2023-b31b1b?style=flat-square)
+![Topic](https://img.shields.io/badge/limited%20labels-ffca28?style=flat-square)
 
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square)](https://arxiv.org/abs/2307.14778)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/jxiong22/MATNilm)
 
+---
 
-### Fed-GBM: a cost-effective federated gradient boosting tree for non-intrusive load monitoring
+### 📌 Graph-Based Dependency-Aware Non-Intrusive Load Monitoring (GRAD-NILM)
 
-> In this paper, we propose a cost-effective collaborative learning framework, Fed-GBM (Federated Gradient Boosting Machines), consisting of two-stage voting and node-level parallelism, to address the problems in co-modelling for NILM. [[PDF](https://dl.acm.org/doi/10.1145/3538637.3538840)] [[Scikit](https://github.com/FedGBM/FedGBM-NILM)] [2022]
+> Neural NILM models ignore — or only implicitly characterise — the dependencies between simultaneously running appliances. This work builds a weighted adjacency matrix from prior temporal knowledge between working appliances (adding per-appliance hard dependencies to avoid sparsity), learns non-sequential dependencies through a **graph attention network**, and uses a dilated-convolution encoder–decoder to estimate power and detect states at the same time. Evaluated on UK-DALE with clear gains over the SotA models of the time.
 
-<p align="center">
-    <img title="" src="./img/fedgbm.png" alt="" width="800" data-align="center">
-</p>
+![Venue](https://img.shields.io/badge/PRCV-2023-blueviolet?style=flat-square)
+![Topic](https://img.shields.io/badge/graph%20attention-4caf50?style=flat-square)
 
+[![Paper](https://img.shields.io/badge/Paper-Springer-01689E?style=flat-square)](https://link.springer.com/chapter/10.1007/978-981-99-8549-4_8)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/zhgqcn/GRAD-NILM)
 
+<p align="center"><img src="./img/GRAD-NILM.png" alt="GRAD-NILM" width="800"></p>
 
+---
 
-### DeepDFML-NILM: A New CNN-Based Architecture for Detection, Feature Extraction and Multi-Label Classification in NILM Signals
+### 📌 MSDC: Exploiting Multi-State Power Consumption in Non-Intrusive Load Monitoring Based on a Dual-CNN Model
 
-> In high-frequency NILM methods, state-of-the-art approaches, mainly based on deep learning solutions, do not provide a complete NILM architecture, including all the required steps. To overcome this gap, this work presents an integrated method for detection, feature extraction, and classification of high-frequency NILM signals for the publicly available LIT-Dataset. [[PDF](https://ieeexplore.ieee.org/abstract/document/9611234)] [[Tensorflow](https://github.com/LucasNolasco/DeepDFML-NILM)] [2022]
+> MSDC explicitly models an appliance's multiple states and state transitions instead of regressing power alone: one CNN outputs state distributions while the other predicts the power of each state, and conditional random fields (CRF) capture state transitions. On REDD and UK-DALE it significantly outperforms previous SotA models.
 
-<p align="center">
-    <img title="" src="./img/DeepDFML.png" alt="" width="800" data-align="center">
-</p>
+![Venue](https://img.shields.io/badge/AAAI-2023-blueviolet?style=flat-square)
+![Topic](https://img.shields.io/badge/multi--state%20CRF-4caf50?style=flat-square)
 
+[![Paper](https://img.shields.io/badge/Paper-AAAI%20Press-01689E?style=flat-square)](https://ojs.aaai.org/index.php/AAAI/article/view/25636/25408)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/sub-paper/MSDC-NILM)
 
+<p align="center"><img src="./img/MSDC-NILM_2023-11-27_11-33-35.jpg" alt="MSDC" width="800"></p>
 
+</details>
 
-### Thresholding Methods in Non-Intrusive Load Monitoring to Estimate Appliance Status
+<details>
+<summary><b>📂 2020 – 2022</b></summary>
+<br>
 
-> We treat three different thresholding methods to perform this task, discussing their differences on various devices from the UK-DALE dataset. [[PDF](https://www.researchsquare.com/article/rs-1923023/v1)] [[Pytorch](https://github.com/UCA-Datalab/nilm-thresholding)] [2022]
+### 📌 "I do not know": Quantifying Uncertainty in Neural Network Based Approaches for Non-Intrusive Load Monitoring
 
-<p align="center">
-    <img title="" src="./img/nilm-threshold.png" alt="" data-align="center">
-</p>
+> Can models tell when they are unsure? The authors evaluate 14 neural variants with uncertainty estimation on REDD and show that uncertainty can be estimated accurately without sacrificing traditional metrics, that different appliances and states differ in how well calibrated they are, and that *recalibration* methods further improve the estimates.
 
+![Venue](https://img.shields.io/badge/BuildSys-2022-blueviolet?style=flat-square)
 
+[![Paper](https://img.shields.io/badge/Paper-ACM%20DL-01689E?style=flat-square)](https://dl.acm.org/doi/abs/10.1145/3563357.3564063)
+[![Code](https://img.shields.io/badge/Code-Jax-009688?style=flat-square)](https://github.com/VibhutiBansal-11/NILM_Uncertainty/tree/master)
 
-### Multi-Label Appliance Classification with Weakly Labeled Data for Non-Intrusive Load Monitoring
+<p align="center"><img src="./img/NILM_Uncertain_2023-11-27_11-42-34.jpg" alt="Uncertainty" width="800"></p>
 
-> This paper presents an appliance classification method based on a Convolutional Recurrent Neural Network trained with weak supervision.  [[PDF](https://ieeexplore.ieee.org/document/9831435)] [[Pytorch](https://github.com/GiuTan/Weak-NILM)] [2022]
+---
 
-<p align='center'>
-    <img title="" src="./img/Weak-NILM.png" alt="" width="800" data-align="center">
-</p>
+### 📌 Fed-GBM: A Cost-Effective Federated Gradient Boosting Tree for Non-Intrusive Load Monitoring
 
+> A collaborative learning framework combining two-stage voting with node-level parallelism, making co-modelling for NILM both privacy-preserving and cost-effective.
 
+![Venue](https://img.shields.io/badge/CIKM-2022-blueviolet?style=flat-square)
 
-### ELECTRIcity: An Efficient Transformer for Non-Intrusive Load Monitoring
+[![Paper](https://img.shields.io/badge/Paper-ACM%20DL-01689E?style=flat-square)](https://dl.acm.org/doi/10.1145/3538637.3538840)
+[![Code](https://img.shields.io/badge/Code-scikit--learn-F89939?style=flat-square)](https://github.com/FedGBM/FedGBM-NILM)
 
-> Utilizing transformer layers to accurately estimate the power signal of domestic appliances by relying entirely on attention mechanisms to extract global dependencies between the aggregate and the domestic appliance signals. [[PDF](https://www.mdpi.com/1424-8220/22/8/2926)] [[Pytorch](https://github.com/ssykiotis/ELECTRIcity_NILM)] [2022] 
+<p align="center"><img src="./img/fedgbm.png" alt="FedGBM" width="800"></p>
 
-<p align='center'>
-    <img title="" src="./img/ELECTRIcity.png" alt="" width="600" data-align="center">
-</p>
+---
 
+### 📌 DeepDFML-NILM: A New CNN-Based Architecture for Detection, Feature Extraction and Multi-Label Classification in NILM Signals
 
+> High-frequency approaches rarely cover the full pipeline. This work delivers an integrated detector → feature extractor → multi-label classifier for high-frequency NILM signals, evaluated on the public LIT-Dataset.
 
-### Learning to Learn Neural Networks for Energy Disaggregation
+![Venue](https://img.shields.io/badge/IEEE-2022-00629B?style=flat-square)
 
-> The research area of learning to learn (L2L) is focused on learning meta knowledge about machine learning and using it to improve the learning process. This work evaluates whether it is possible to apply L2L techniques, that learn to optimize neural networks to state-of-the art energy disaggregation algorithms and employ them to increase performance and transferability across datasets. We take a novel approach by applying L2L to energy disaggregation. [[PDF](https://github.com/jsobbe/meta_nilm/blob/thesis/thesis_jsobbe.zip)] [[Tensorflow](https://github.com/jsobbe/meta_nilm/tree/main)] [2022] [master thesis] 
+[![Paper](https://img.shields.io/badge/Paper-IEEE-00629B?style=flat-square)](https://ieeexplore.ieee.org/abstract/document/9611234)
+[![Code](https://img.shields.io/badge/Code-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)](https://github.com/LucasNolasco/DeepDFML-NILM)
 
-<p align='center'>
-    <img title="" src="./img/L2L.png" alt="" width="600" data-align="center">
-</p>
+<p align="center"><img src="./img/DeepDFML.png" alt="DeepDFML" width="800"></p>
 
+---
 
+### 📌 Thresholding Methods in Non-Intrusive Load Monitoring to Estimate Appliance Status
 
+> Compares three thresholding strategies for turning continuous estimates into on/off statuses, and discusses how they differ across appliances from UK-DALE.
 
-### Deep Learning-Based Non-Intrusive Commercial Load Monitoring
+![Venue](https://img.shields.io/badge/Research%20Square-2022-2d8cf0?style=flat-square)
 
->The key elements of the method are a new neural network structure called TTRNet and a new loss function called MLFL. TTRNet is a multi-label  classification model that can autonomously learn correlation information through its unique network structure. MLFL is a loss function specifically designed for multi-label classification tasks, which solves the imbalance problem and improves the monitoring accuracy for challenging loads. [[PDF](https://www.researchgate.net/publication/361988541_Deep_Learning-Based_Non-Intrusive_Commercial_Load_Monitoring/figures?lo=1)] [[Pytorch](https://github.com/shaoshuai6666/TTRNet)] [2022]
+[![Paper](https://img.shields.io/badge/Paper-PDF-orange?style=flat-square)](https://www.researchsquare.com/article/rs-1923023/v1)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/UCA-Datalab/nilm-thresholding)
 
-<p align='center'>
-    <img title="" src="./img/TTRNet.png" alt="" width="800" data-align="center">
-</p>
+<p align="center"><img src="./img/nilm-threshold.png" alt="Thresholding" width="800"></p>
 
+---
 
+### 📌 Multi-Label Appliance Classification with Weakly Labeled Data for Non-Intrusive Load Monitoring
 
-### Improving Non-Intrusive Load Disaggregation through an Attention-Based Deep Neural Network
+> An appliance classifier built on a convolutional recurrent neural network trained under weak supervision, cutting the annotation burden for multi-label NILM.
 
-> We improve the generalization capability of the overall architecture by including an encoder–decoder with a tailored attention mechanism in the regression subnetwork. The attention mechanism is inspired by the temporal attention. [[PDF](https://www.mdpi.com/1996-1073/14/4/847)] [[Tensorflow](https://github.com/antoniosudoso/attention-nilm)] [2021]
+![Venue](https://img.shields.io/badge/IEEE-2022-00629B?style=flat-square)
 
-<p align='center'>
-    <img title="" src="./img/attention-NILM.png" alt="" width="800" data-align="center">
-</p>
+[![Paper](https://img.shields.io/badge/Paper-IEEE-00629B?style=flat-square)](https://ieeexplore.ieee.org/document/9831435)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/GiuTan/Weak-NILM)
 
+<p align="center"><img src="./img/Weak-NILM.png" alt="Weak-NILM" width="800"></p>
 
+---
 
-### Energy Disaggregation using Variational Autoencoders
+### 📌 ELECTRIcity: An Efficient Transformer for Non-Intrusive Load Monitoring
 
-> In this paper we propose an energy disaggregation approach based on the variational autoencoders framework. The probabilistic encoder makes this approach an efficient model for encoding information relevant to the reconstruction of the target appliance consumption. [[PDF](https://arxiv.org/pdf/2103.12177.pdf)] [[Tensorflow](https://github.com/ETSSmartRes/VAE-NILM)] [2021]
+> Uses Transformer layers to estimate appliance-level power, relying entirely on attention mechanisms to capture global dependencies between the aggregate signal and each domestic appliance.
 
-<p align='center'>
-    <img title="" src="./img/VAE-NILM.png" alt="" width="800" data-align="center">
-</p>
+![Venue](https://img.shields.io/badge/Sensors-2022-00A0DD?style=flat-square)
 
+[![Paper](https://img.shields.io/badge/Paper-Sensors-00A0DD?style=flat-square)](https://www.mdpi.com/1424-8220/22/8/2926)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/ssykiotis/ELECTRIcity_NILM)
 
+<p align="center"><img src="./img/ELECTRIcity.png" alt="ELECTRIcity" width="600"></p>
 
-### Sequence to point learning based on bidirectional dilated residual network for non-intrusive load monitoring
+---
 
-> We propose a sequence to point learning based on bidirectional dilated convolution for NILM on low-frequency data, called BitcnNILM. We compare our method with existing algorithms on low-frequency data via REDD and UK-DALE datasets. Experiments show that the superiority of our BitcnNILM in both load disaggregation and load on/off identification. [[PDF](https://www.sciencedirect.com/science/article/pii/S0142061521000776)] [[Keras](https://github.com/linfengYang/BitcnNILM)] [2021]
+### 📌 Learning to Learn Neural Networks for Energy Disaggregation
 
-<p align='center'>
-    <img title="" src="./img/BitcnNILM_2023-11-27_14-55-50.jpg" alt="" width="800" data-align="center">
-</p>
+> Applies *learning to learn* (meta-learning of the optimiser itself) to energy disaggregation, improving both performance and transferability across datasets.
 
+![Note](https://img.shields.io/badge/MSc%20thesis-2022-lightgrey?style=flat-square)
 
+[![Report](https://img.shields.io/badge/Report-PDF-orange?style=flat-square)](https://github.com/jsobbe/meta_nilm/blob/thesis/thesis_jsobbe.zip)
+[![Code](https://img.shields.io/badge/Code-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)](https://github.com/jsobbe/meta_nilm/tree/main)
 
-### BERT4NILM: A Bidirectional Transformer Model for Non-Intrusive Load Monitoring
+<p align="center"><img src="./img/L2L.png" alt="L2L" width="600"></p>
 
-> We propose BERT4NILM, an architecture based on bidirectional encoder representations from transformers (BERT) and an improved objective function designed specifically for NILM learning. We adapt the bidirectional transformer architecture to the field of energy disaggregation and follow the pattern of sequence-to-sequence learning. [[PDF](https://dl.acm.org/doi/10.1145/3427771.3429390)] [[Pytorch](https://github.com/Yueeeeeeee/BERT4NILM)] [2020]
+---
 
-<p align='center'>
-    <img title="" src="./img/BERT4NILM.png" alt="" width="800" data-align="center">
-</p>
+### 📌 Deep Learning-Based Non-Intrusive Commercial Load Monitoring
 
+> Introduces **TTRNet**, a multi-label classification network that learns inter-load correlations through its own structure, and **MLFL**, a loss function purpose-built for multi-label imbalance — together improving accuracy on the hardest commercial loads.
 
+![Venue](https://img.shields.io/badge/ResearchGate-2022-00CCBB?style=flat-square)
 
-### Generative Adversarial Networks and Transfer Learning for Non-Intrusive Load Monitoring in Smart Grids
+[![Paper](https://img.shields.io/badge/Paper-ResearchGate-00CCBB?style=flat-square)](https://www.researchgate.net/publication/361988541_Deep_Learning-Based_Non-Intrusive_Commercial_Load_Monitoring/figures?lo=1)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/shaoshuai6666/TTRNet)
 
-> While many studies focus on achieving accurate models, few of them address the models generalizability. This paper proposes two approaches based on generative adversarial networks to achieve high-accuracy load disaggregation. Concurrently, the paper addresses the model generalizability in two ways, the first is by transfer learning by parameter sharing and the other is by learning compact common representations between source and target domains. This paper also quantitatively evaluate the worth of these transfer learning approaches based on the similarity between the source and target domains. [[PDF](https://ieeexplore.ieee.org/document/9302933)] [[Pytorch](https://github.com/Awadelrahman/GAN-NILM)] [2020]
+<p align="center"><img src="./img/TTRNet.png" alt="TTRNet" width="800"></p>
 
-<p align='center'>
-    <img title="" src="./img/GAN-NILM.png" alt="" width="800" data-align="center">
-</p>
+---
 
+### 📌 Improving Non-Intrusive Load Disaggregation through an Attention-Based Deep Neural Network
 
+> Improves the generalisation capability of the architecture by inserting an encoder–decoder with a tailored temporal attention mechanism into the regression subnetwork.
 
+![Venue](https://img.shields.io/badge/Energies-2021-00A0DD?style=flat-square)
 
-### Exploring Time Series Imaging for Load Disaggregation
+[![Paper](https://img.shields.io/badge/Paper-Energies-00A0DD?style=flat-square)](https://www.mdpi.com/1996-1073/14/4/847)
+[![Code](https://img.shields.io/badge/Code-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)](https://github.com/antoniosudoso/attention-nilm)
 
-> The main contribution presented in this paper is a comparison study between three common imaging techniques: Gramian Angular Fields, Markov Transition Fields, and Recurrence Plots. [[PDF](https://dl.acm.org/doi/10.1145/3408308.3427975)] [[Tensorflow](https://github.com/BHafsa/image-nilm)] [2020]
+<p align="center"><img src="./img/attention-NILM.png" alt="attention-NILM" width="800"></p>
 
-<p align='center'>
-    <img title="" src="./img/image-nilm.png" alt="" data-align="center">
-</p>
+---
 
+### 📌 Energy Disaggregation using Variational Autoencoders
 
+> Casts disaggregation into the variational autoencoder framework, where the probabilistic encoder efficiently encodes the information needed to reconstruct the target appliance's consumption.
 
-### On time series representations for multi-label NILM
+![Venue](https://img.shields.io/badge/arXiv-2021-b31b1b?style=flat-square)
 
->The proposed system leverages dimensionality reduction using Signal2Vec, is evaluated on two popular public datasets and outperforms another state-of-the-art multi-label NILM system. [[PDF](https://link.springer.com/epdf/10.1007/s00521-020-04916-5?sharing_token=bTZg6CBADDbWx7UVvztexPe4RwlQNchNByi7wbcMAY4YyOCPZ8jI-u3LyC4lDtEOZIQACACm_MVY_633J4jzg0CtjGEkhvPkzOs5Z-2UGgB1P_m1_4nDnPxtIplmNRaDx7TM52V6MVQYVJPSqJEKpxv1n3RqXoEm1ZpW5amjaaA%3D)] [[Scikit-learn](https://github.com/ChristoferNal/multi-nilm)] [2020]
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square)](https://arxiv.org/pdf/2103.12177.pdf)
+[![Code](https://img.shields.io/badge/Code-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)](https://github.com/ETSSmartRes/VAE-NILM)
 
-<p align='center'>
-    <img title="" src="./img/online-multi-nilm.png" alt="" data-align="center">
-</p>
+<p align="center"><img src="./img/VAE-NILM.png" alt="VAE-NILM" width="800"></p>
 
+---
 
+### 📌 Sequence to Point Learning Based on Bidirectional Dilated Residual Network for Non-Intrusive Load Monitoring (BitcnNILM)
 
-### Improved Appliance Classification in Non-Intrusive Load Monitoring Using Weighted Recurrence Graph and Convolutional Neural Networks
+> Sequence-to-point learning with bidirectional dilated convolutions for low-frequency NILM; on REDD and UK-DALE it improves both load disaggregation and on/off identification.
 
-> We propose an appliance recognition method utilizing the recurrence graph (RG) technique and CNNs. We introduce the weighted recurrent graph (WRG) generation that, given one cycle current and voltage, produces an image-like representation with more values than the binary output created by RG. [[PDF](https://www.mdpi.com/1996-1073/13/13/3374/htm)] [[Pytorch](https://github.com/sambaiga/WRG-NILM)] [2020]
+![Venue](https://img.shields.io/badge/Electrical%20Power%20%26%20Energy%20Systems-2021-blue?style=flat-square)
 
-<p align='center'>
-    <img title="" src="./img/WRG-nilm.png" alt="" data-align="center">
-</p>
+[![Paper](https://img.shields.io/badge/Paper-ScienceDirect-orange?style=flat-square)](https://www.sciencedirect.com/science/article/pii/S0142061521000776)
+[![Code](https://img.shields.io/badge/Code-Keras-D00000?style=flat-square)](https://github.com/linfengYang/BitcnNILM)
 
+<p align="center"><img src="./img/BitcnNILM_2023-11-27_14-55-50.jpg" alt="BitcnNILM" width="800"></p>
 
+---
 
-### UNet-NILM: A Deep Neural Network for Multi-tasks Appliances State Detection and Power Estimation in NILM
+### 📌 BERT4NILM: A Bidirectional Transformer Model for Non-Intrusive Load Monitoring
 
->We propose UNet-NILM for multi-task appliances' state detection and power estimation, applying a multi-label learning strategy and multi-target quantile regression.  [[PDF](https://dl.acm.org/doi/10.1145/3427771.3427859)] [[Official | Pytorch](https://github.com/sambaiga/UNETNiLM)] [[Reimplement | Pytorch](https://github.com/jonasbuchberger/energy_disaggregation)] [2020] 
+> Adapts BERT-style bidirectional Transformers to energy disaggregation in a sequence-to-sequence fashion, with an improved objective function designed specifically for NILM.
 
-<p align='center'>
-    <img title="" src="./img/Unet-NILM.png" alt=""  data-align="center">
-</p>
+![Venue](https://img.shields.io/badge/BuildSys-2020-blueviolet?style=flat-square)
 
+[![Paper](https://img.shields.io/badge/Paper-ACM%20DL-01689E?style=flat-square)](https://dl.acm.org/doi/10.1145/3427771.3429390)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/Yueeeeeeee/BERT4NILM)
 
+<p align="center"><img src="./img/BERT4NILM.png" alt="BERT4NILM" width="800"></p>
 
-### Non-Intrusive Load Disaggregation by Convolutional Neural Network and Multilabel Classification
+---
 
->We address the problem through the recognition of the state of activation of the appliances using a fully convolutional deep neural network, borrowing some techniques used in the semantic segmentation of images and multilabel classification. [[PDF](https://www.mdpi.com/2076-3417/10/4/1454)] [[Pytorch](https://github.com/lmssdd/TPNILM)] [2020]
+### 📌 Generative Adversarial Networks and Transfer Learning for Non-Intrusive Load Monitoring in Smart Grids
 
-<p align='center'>
-    <img title="" src="./img/TP-NILM.png" alt="" width="700" data-align="center">
-</p>
+> Two GAN-based approaches for high-accuracy disaggregation that also tackle generalisability — via parameter-sharing transfer learning and via compact shared representations between source and target domains — with a quantitative study of how domain similarity affects the transfer payoff.
 
+![Venue](https://img.shields.io/badge/IEEE-2020-00629B?style=flat-square)
 
+[![Paper](https://img.shields.io/badge/Paper-IEEE-00629B?style=flat-square)](https://ieeexplore.ieee.org/document/9302933)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/Awadelrahman/GAN-NILM)
 
-### Multi-label Learning for Appliances Recognition in NILM using Fryze-Current Decomposition and Convolutional Neural Network.
+<p align="center"><img src="./img/GAN-NILM.png" alt="GAN-NILM" width="800"></p>
 
->This paper proposes the CNN-based multi-label learning approach, which links multiple loads to an observed aggregate current signal.  Apply the Fryze power theory to decompose the current features into active and non-active components and use the Euclidean distance similarity function to transform the decomposed current into an image-like representation which is used as input to the CNN.  [[PDF](https://www.mdpi.com/1996-1073/13/16/4154)] [[Pytorch](https://github.com/sambaiga/MLCFCD)] [2020]
+---
 
-<p align='center'>
-    <img title="" src="./img/Fryze-Current.png" alt="" width='700' data-align="center">
-</p>
+### 📌 Exploring Time Series Imaging for Load Disaggregation
 
+> A comparative study of three time-series imaging techniques for NILM — Gramian Angular Fields, Markov Transition Fields and Recurrence Plots.
 
+![Venue](https://img.shields.io/badge/BuildSys-2020-blueviolet?style=flat-square)
 
+[![Paper](https://img.shields.io/badge/Paper-ACM%20DL-01689E?style=flat-square)](https://dl.acm.org/doi/10.1145/3408308.3427975)
+[![Code](https://img.shields.io/badge/Code-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)](https://github.com/BHafsa/image-nilm)
 
-### EdgeNILM: Towards NILM on Edge Devices
+<p align="center"><img src="./img/image-nilm.png" alt="image-nilm"></p>
 
-> We study different neural network compression schemes and their efficacy on the state-of-the-art neural network NILM method. We additionally propose a multi-task learning-based architecture to compress models further. [[PDF](https://dl.acm.org/doi/pdf/10.1145/3408308.3427977)] [[Pytorch](https://github.com/EdgeNILM/EdgeNILM)] [2020]
+---
 
-<p align='center'>
-    <img title="" src="./img/Edge-NILM-1.png" alt="" width='700' data-align="center">
-</p>
+### 📌 On Time Series Representations for Multi-Label NILM
 
+> Leverages **Signal2Vec** dimensionality reduction inside a multi-label NILM system, outperforming another state-of-the-art multi-label baseline on two popular public datasets.
 
+![Venue](https://img.shields.io/badge/Neural%20Computing%20%26%20Applications-2020-01689E?style=flat-square)
 
-<p align='center'>
-    <img title="" src="./img/Edge-NILM-2.png" alt="" width='800' data-align="center">
-</p>
+[![Paper](https://img.shields.io/badge/Paper-Springer-01689E?style=flat-square)](https://link.springer.com/epdf/10.1007/s00521-020-04916-5)
+[![Code](https://img.shields.io/badge/Code-scikit--learn-F89939?style=flat-square)](https://github.com/ChristoferNal/multi-nilm)
 
+<p align="center"><img src="./img/online-multi-nilm.png" alt="multi-nilm"></p>
 
+---
 
-### eeRIS-NILM: An Open Source, Unsupervised Baseline for Real-Time Feedback Through NILM
+### 📌 Improved Appliance Classification in NILM Using Weighted Recurrence Graph and Convolutional Neural Networks
 
->  In this context, the ideal NILM algorithm should be unsupervised and provide real-time consumption feedback. Solutions with these characteristics have not been sufficiently studied in the NILM bibliography. This paper introduces an attempt to address this problem, by suggesting the use of a “Live” algorithm that provides real-time feedback. The Live algorithm runs in parallel with a more robust NILM procedure, and a periodic synchronization step ensures that the two processes share the same appliance models. [[PDF](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9209866)] [[Scikit](https://github.com/eeris-nilm/eeris_nilm)] [2020]
+> Introduces the **weighted recurrence graph (WRG)** generated from one cycle of current and voltage — a richer, non-binary image-like representation — and feeds it to a CNN for appliance recognition.
 
-<p align='center'>
-    <img title="" src="./img/eeRIS-NILM.png" alt="" width='600' data-align="center">
-</p>
+![Venue](https://img.shields.io/badge/Energies-2020-00A0DD?style=flat-square)
 
+[![Paper](https://img.shields.io/badge/Paper-Energies-00A0DD?style=flat-square)](https://www.mdpi.com/1996-1073/13/13/3374/htm)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/sambaiga/WRG-NILM)
 
+<p align="center"><img src="./img/WRG-nilm.png" alt="WRG-NILM"></p>
 
+---
 
-### Deep Learning Based Energy Disaggregation and On/Off Detection of Household Appliances
+### 📌 UNet-NILM: A Deep Neural Network for Multi-Tasks Appliances State Detection and Power Estimation in NILM
 
-> We investigate the application of the recently developed WaveNet models for the task of energy disaggregation. [[PDF](https://arxiv.org/abs/1908.00941)] [[Pytorch](https://github.com/jiejiang-jojo/fast-seq2point)] [2019] 
+> A U-Net variant performing state detection and power estimation jointly, using multi-label learning and multi-target quantile regression.
 
-<p align='center'>
-    <img title="" src="./img/fast-seq2point.png" alt="" width='800' data-align="center">
-</p>
+![Venue](https://img.shields.io/badge/BuildSys-2020-blueviolet?style=flat-square)
 
+[![Paper](https://img.shields.io/badge/Paper-ACM%20DL-01689E?style=flat-square)](https://dl.acm.org/doi/10.1145/3427771.3427859)
+[![Official](https://img.shields.io/badge/Official-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/sambaiga/UNETNiLM)
+[![Reimplementation](https://img.shields.io/badge/Reimpl-PyTorch-lightgrey?style=flat-square)](https://github.com/jonasbuchberger/energy_disaggregation)
 
+<p align="center"><img src="./img/Unet-NILM.png" alt="UNet-NILM"></p>
 
+---
 
+### 📌 Non-Intrusive Load Disaggregation by Convolutional Neural Network and Multilabel Classification
 
-### Wavenilm: A causal neural network for power disaggregation from the complex power signal
+> Recognises appliance activation states with a fully convolutional network, borrowing techniques from semantic image segmentation and multi-label classification.
 
-> We present a causal 1-D convolutional neural network inspired by WaveNet for NILM on low-frequency data. We also study using various components of the complex power signal for NILM, and demonstrate that using all four components available in a popular NILM dataset (current, active power, reactive power, and apparent power). [[PDF](https://arxiv.org/pdf/1902.08736.pdf)] [[Keras](https://github.com/picagrad/WaveNILM)] [2019]
+![Venue](https://img.shields.io/badge/Applied%20Sciences-2020-00A0DD?style=flat-square)
 
-<p align='center'>
-    <img title="" src="./img/WaveNILM.png" alt="" data-align="center">
-</p>
+[![Paper](https://img.shields.io/badge/Paper-Applied%20Sciences-00A0DD?style=flat-square)](https://www.mdpi.com/2076-3417/10/4/1454)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/lmssdd/TPNILM)
 
+<p align="center"><img src="./img/TP-NILM.png" alt="TPNILM" width="700"></p>
 
+---
 
+### 📌 Multi-Label Learning for Appliances Recognition in NILM using Fryze-Current Decomposition and Convolutional Neural Network
 
+> Applies Fryze power theory to split the current into active and non-active components, converts the decomposition into an image-like representation via Euclidean similarity, and classifies it with a CNN under multi-label learning.
 
-### Transfer Learning for Non-Intrusive Load Monitoring
+![Venue](https://img.shields.io/badge/Energies-2020-00A0DD?style=flat-square)
 
-> Appliance transfer learning (ATL) and cross-domain transfer learning (CTL). [[PDF](https://arxiv.org/pdf/1902.08835.pdf)] [[Tensorflow](https://github.com/MingjunZhong/transferNILM)] [2019]
+[![Paper](https://img.shields.io/badge/Paper-Energies-00A0DD?style=flat-square)](https://www.mdpi.com/1996-1073/13/16/4154)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/sambaiga/MLCFCD)
 
-<p align='center'>
-    <img title="" src="./img/TransferNILM.png" alt="" width='700' data-align="center">
-</p>
+<p align="center"><img src="./img/Fryze-Current.png" alt="Fryze-Current" width="700"></p>
 
+---
 
+### 📌 EdgeNILM: Towards NILM on Edge Devices
 
+> Studies neural network compression schemes against a SotA NILM model and proposes a multi-task learning architecture that compresses the models further — targeting deployment on resource-constrained edge hardware.
 
+![Venue](https://img.shields.io/badge/BuildSys-2020-blueviolet?style=flat-square)
+![Topic](https://img.shields.io/badge/edge%20%2F%20compression-4caf50?style=flat-square)
 
-### Sliding Window Approach for Online Energy Disaggregation Using Artificial Neural Networks 
+[![Paper](https://img.shields.io/badge/Paper-ACM%20DL-01689E?style=flat-square)](https://dl.acm.org/doi/pdf/10.1145/3408308.3427977)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/EdgeNILM/EdgeNILM)
 
-> We propose two recurrent network architectures that use sliding window for real-time energy disaggregation.  [[PDF](https://dl.acm.org/doi/pdf/10.1145/3200947.3201011)] [[Keras](https://github.com/OdysseasKr/online-nilm)] [2018]
+<p align="center"><img src="./img/Edge-NILM-1.png" alt="EdgeNILM" width="700"></p>
+<p align="center"><img src="./img/Edge-NILM-2.png" alt="EdgeNILM" width="800"></p>
 
-<p align='center'>
-    <img title="" src="./img/Short-Seq2Point.png" alt="" data-align="center">
-</p>
+---
 
+### 📌 eeRIS-NILM: An Open Source, Unsupervised Baseline for Real-Time Feedback Through NILM
 
+> An ideal NILM algorithm should be unsupervised and give real-time feedback, yet such solutions are under-studied. eeRIS pairs a lightweight *Live* algorithm (running continuously) with a heavier, more robust NILM procedure, synchronising their appliance models periodically.
 
+![Venue](https://img.shields.io/badge/IEEE-2020-00629B?style=flat-square)
 
+[![Paper](https://img.shields.io/badge/Paper-IEEE-00629B?style=flat-square)](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9209866)
+[![Code](https://img.shields.io/badge/Code-scikit--learn-F89939?style=flat-square)](https://github.com/eeris-nilm/eeris_nilm)
 
-### Subtask Gated Networks for Non-Intrusive Load Monitoring
+<p align="center"><img src="./img/eeRIS-NILM.png" alt="eeRIS-NILM" width="600"></p>
 
-> We propose a subtask gated network that combines the main regression network with an on/off classification subtask network. [[PDF](https://arxiv.org/pdf/1811.06692.pdf)] [[Pytorch](https://github.com/inesylla/energy-disaggregation-DL)] [2018]
+</details>
 
-<p align='center'>
-    <img title="" src="./img/Subtask-NILM.png" alt="" data-align="center">
-</p>
+<details>
+<summary><b>🏛️ Classics · 2015 – 2019</b></summary>
+<br>
 
+### 📌 Deep Learning Based Energy Disaggregation and On/Off Detection of Household Appliances
 
+> Investigates **WaveNet** architectures for energy disaggregation with fast sequence-to-point learning.
 
+![Venue](https://img.shields.io/badge/arXiv-2019-b31b1b?style=flat-square)
 
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square)](https://arxiv.org/abs/1908.00941)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/jiejiang-jojo/fast-seq2point)
 
-### Sequence-to-point learning with neural networks for non-intrusive load monitoring
+<p align="center"><img src="./img/fast-seq2point.png" alt="fast-seq2point" width="800"></p>
 
-> We propose sequence-to-point learning, where the input is a window of the mains and the output is a single point of the target appliance. [[PDF](https://arxiv.org/pdf/1612.09106.pdf)] [[Tensorflow](https://github.com/MingjunZhong/seq2point-nilm)] [2017] [[Reimplement-Pytorch](https://github.com/mahnoor-shahid/seq2point)] 
+---
 
-<p align='center'>
-    <img title="" src="./img/Seq2Point.png" alt="" data-align="center">
-</p>
+### 📌 WaveNILM: A Causal Neural Network for Power Disaggregation from the Complex Power Signal
 
+> A causal 1-D WaveNet-style CNN for low-frequency NILM, plus a study showing that all four complex-power components (current, active, reactive and apparent power) are worth using.
 
+![Venue](https://img.shields.io/badge/ICASSP-2019-blueviolet?style=flat-square)
 
-### Neural NILM: Deep Neural Networks Applied to Energy Disaggregation
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square)](https://arxiv.org/pdf/1902.08736.pdf)
+[![Code](https://img.shields.io/badge/Code-Keras-D00000?style=flat-square)](https://github.com/picagrad/WaveNILM)
 
-> We adapt three DNN architectures to energy disaggregation: 1) a form of RNN called LSTM; 2) denoising autoencoders; and 3) a network which regresses the start time, end time and average power demand of each appliance activation. [[PDF](https://www.researchgate.net/publication/280329746_Neural_NILM_Deep_Neural_Networks_Applied_to_Energy_Disaggregation)] [[Theano](https://github.com/JackKelly/neuralnilm_prototype)] [2015]
+<p align="center"><img src="./img/WaveNILM.png" alt="WaveNILM"></p>
 
-<p align='center'>
-    <img title="" src="./img/neural-nilm.png" alt="" data-align="center">
-</p>
+---
 
-## ⭐ Star History
+### 📌 Transfer Learning for Non-Intrusive Load Monitoring
+
+> The foundational transfer-learning study for NILM, covering both appliance transfer learning (ATL) and cross-domain transfer learning (CTL).
+
+![Venue](https://img.shields.io/badge/arXiv-2019-b31b1b?style=flat-square)
+
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square)](https://arxiv.org/pdf/1902.08835.pdf)
+[![Code](https://img.shields.io/badge/Code-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)](https://github.com/MingjunZhong/transferNILM)
+
+<p align="center"><img src="./img/TransferNILM.png" alt="TransferNILM" width="700"></p>
+
+---
+
+### 📌 Sliding Window Approach for Online Energy Disaggregation Using Artificial Neural Networks
+
+> Two recurrent network architectures with a sliding window, designed for real-time energy disaggregation.
+
+![Venue](https://img.shields.io/badge/SETN-2018-blueviolet?style=flat-square)
+
+[![Paper](https://img.shields.io/badge/Paper-ACM%20DL-01689E?style=flat-square)](https://dl.acm.org/doi/pdf/10.1145/3200947.3201011)
+[![Code](https://img.shields.io/badge/Code-Keras-D00000?style=flat-square)](https://github.com/OdysseasKr/online-nilm)
+
+<p align="center"><img src="./img/Short-Seq2Point.png" alt="online-nilm"></p>
+
+---
+
+### 📌 Subtask Gated Networks for Non-Intrusive Load Monitoring
+
+> Combines the main regression network with an on/off classification subtask network through a gating mechanism.
+
+![Venue](https://img.shields.io/badge/AAAI-2019-blueviolet?style=flat-square)
+
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square)](https://arxiv.org/pdf/1811.06692.pdf)
+[![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/inesylla/energy-disaggregation-DL)
+
+<p align="center"><img src="./img/Subtask-NILM.png" alt="Subtask-NILM"></p>
+
+---
+
+### 📌 Sequence-to-Point Learning with Neural Networks for Non-Intrusive Load Monitoring
+
+> ⭐ *The canonical seq2point baseline.* The input is a window of the mains aggregate; the output is a single point of the target appliance.
+
+![Venue](https://img.shields.io/badge/AAAI-2017-blueviolet?style=flat-square)
+![Classic](https://img.shields.io/badge/most--cited%20baseline-gold?style=flat-square)
+
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square)](https://arxiv.org/pdf/1612.09106.pdf)
+[![Original](https://img.shields.io/badge/Original-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)](https://github.com/MingjunZhong/seq2point-nilm)
+[![Reimplementation](https://img.shields.io/badge/Reimpl-PyTorch-EE4C2C?style=flat-square)](https://github.com/mahnoor-shahid/seq2point)
+
+<p align="center"><img src="./img/Seq2Point.png" alt="Seq2Point"></p>
+
+---
+
+### 📌 Neural NILM: Deep Neural Networks Applied to Energy Disaggregation
+
+> 🏛️ *The paper that started deep NILM.* It adapts three DNN architectures to energy disaggregation: a form of RNN called LSTM, denoising autoencoders, and a network that regresses the start time, end time and average power demand of each appliance activation.
+
+![Venue](https://img.shields.io/badge/BuildSys-2015-blueviolet?style=flat-square)
+![Classic](https://img.shields.io/badge/foundational%20work-gold?style=flat-square)
+
+[![Paper](https://img.shields.io/badge/Paper-ResearchGate-00CCBB?style=flat-square)](https://www.researchgate.net/publication/280329746_Neural_NILM_Deep_Neural_Networks_Applied_to_Energy_Disaggregation)
+[![Code](https://img.shields.io/badge/Code-Theano-lightgrey?style=flat-square)](https://github.com/JackKelly/neuralnilm_prototype)
+
+<p align="center"><img src="./img/neural-nilm.png" alt="Neural NILM"></p>
+
+</details>
+
+---
+
+## 📚 Reviews
+
+| 📖 Survey | Links |
+| :--- | :--- |
+| **Neural Load Disaggregation: Meta-Analysis, Federated Learning and Beyond** — emphasises federated neural NILM, where models are trained locally so sensitive data never leaves the home. <br><img src="./img/FL-NILIM-survey.png" alt="FL-NILM" width="420"> | [![Paper](https://img.shields.io/badge/Paper-Energies-00A0DD?style=flat-square)](https://www.mdpi.com/1996-1073/16/2/991) [![Code](https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://github.com/BHafsa/FL-NILM) ![2023](https://img.shields.io/badge/2023-lightgrey?style=flat-square) |
+| **Non-Intrusive Load Monitoring: A Review** — broad review of the field shipped with baseline code. | [![Paper](https://img.shields.io/badge/Paper-IEEE-00629B?style=flat-square)](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9820770) [![Code](https://img.shields.io/badge/Code-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)](https://github.com/pascme05/BaseNILM) ![2022](https://img.shields.io/badge/2022-lightgrey?style=flat-square) |
+| **NILM Applications: Literature Review of Learning Approaches, Recent Developments and Challenges** — maps learning-based approaches, recent progress and open challenges. | [![Paper](https://img.shields.io/badge/Paper-ScienceDirect-orange?style=flat-square)](https://www.sciencedirect.com/science/article/abs/pii/S0378778822001220) ![2022](https://img.shields.io/badge/2022-lightgrey?style=flat-square) |
+| **Review on Deep Neural Networks Applied to Low-Frequency NILM** — a focused review of deep architectures for low-frequency smart-meter data. | [![Paper](https://img.shields.io/badge/Paper-Energies-00A0DD?style=flat-square)](https://www.mdpi.com/1996-1073/14/9/2390) ![2021](https://img.shields.io/badge/2021-lightgrey?style=flat-square) |
+
+---
+
+## 🚀 Deployment
+
+> Systems that put NILM onto real hardware — from servers down to 18 KB MCUs.
+
+### 📌 A Real-Time Tsetlin Machine-Based Non-Intrusive Load Monitoring System on MCUs
+
+> Reformulates NILM as a Boolean classification task solved by a **Tsetlin Machine**, reaching 90% precision / 96% recall for two-appliance classification on REDD while using only **18 KB of flash** and **0.43 ms** inference latency on an ESP32 — enabling privacy-preserving, fully on-device NILM.
+
+![Venue](https://img.shields.io/badge/arXiv-2026-b31b1b?style=flat-square)
+![Device](https://img.shields.io/badge/MCU%20%2F%20TinyML-18%20KB%20flash-brightgreen?style=flat-square)
+
+[![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square)](https://arxiv.org/abs/2608.18780)
+[![Code](https://img.shields.io/badge/Code-GitHub-181717?style=flat-square&logo=github)](https://github.com/wuhanstudio/nilm)
+
+---
+
+| Project | Stack | Link |
+| :--- | :--- | :--- |
+| **Energy Management Using Real-Time NILM** | Arduino + Raspberry Pi | [![Code](https://img.shields.io/badge/Code-GitHub-181717?style=flat-square&logo=github)](https://github.com/goruck/nilm) |
+| **flask-NILM-app-v1** | Flask web app | [![Code](https://img.shields.io/badge/Code-GitHub-181717?style=flat-square&logo=github)](https://github.com/Selim321/flask-NILM-app-v1) |
+| **Inverse Decomposition of Energy Consumption (IDEC)** | C++ | [![Code](https://img.shields.io/badge/Code-GitHub-181717?style=flat-square&logo=github)](https://github.com/mieskolainen/IDEC) |
+
+---
+
+# ⭐ Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=zhgqcn/awesome-NILM-with-code&type=Date)](https://star-history.com/#zhgqcn/awesome-NILM-with-code&Date)
 
+---
 
+<div align="center">
+
+**Contributions welcome!** Open an issue or a PR to add your NILM work *with code*.
+
+Made with 💛 for the energy disaggregation community · Licensed under [CC BY 4.0](./LICENSE)
+
+</div>
