@@ -4,6 +4,27 @@
 >
 > 😸 Welcome valuable opinions from researchers in the same direction
 
+<p align="center">
+    <a href="https://github.com/zhgqcn/awesome-NILM-with-code/stargazers"><img src="https://img.shields.io/github/stars/zhgqcn/awesome-NILM-with-code.svg?style=flat-square&logo=github" alt="Stars"/></a>
+    <a href="https://github.com/zhgqcn/awesome-NILM-with-code/network/members"><img src="https://img.shields.io/github/forks/zhgqcn/awesome-NILM-with-code.svg?style=flat-square&logo=github" alt="Forks"/></a>
+    <a href="./LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg?style=flat-square" alt="License"/></a>
+    <a href="#-papers"><img src="https://img.shields.io/badge/papers-30%2B-green.svg?style=flat-square" alt="Papers"/></a>
+</p>
+
+## 📑 Contents
+
+- [Toolkits](#️toolkits)
+- [Conference](#-conference)
+- [Datasets](#-datasets)
+- [Papers](#-papers)
+  - [Reviews](#-reviews)
+  - [Deployment](#-deployment)
+  - [Methods](#-methods)
+
+## 🔥 Recent Updates
+
+- **2026-09**: Added MSDCANet (DSP 2026), DualNILM (PV-injection aware NILM), NILMFormer (KDD 2025), training-free LLM-based NILM, diffusion-model-based data augmentation (Energy 2025), MATNilm, and a Tsetlin Machine NILM system for MCUs; fixed broken links (MSDC, GRAD-NILM, attention-NILM, HawkDATA); added CC BY 4.0 license.
+
 
 
 # 🛠️Toolkits
@@ -22,7 +43,7 @@
 # 🧑‍🤝‍🧑Conference
 
 - [Energy Informatics](https://energyinformatics.springeropen.com/)
-- [International Workshop on Non-Intrusive Load Monitoring](http://nilmworkshop.org/2022/) [[nilmworkshop.org](https://github.com/smakonin/nilmworkshop.org)] 
+- [International Workshop on Non-Intrusive Load Monitoring](https://nilmworkshop.org/) [[nilmworkshop.org](https://github.com/smakonin/nilmworkshop.org)] 
 - [International Conference on Power Engineering and Renewable Energy (ICPERE)](http://icpere2022.com/)
 
 
@@ -31,7 +52,7 @@
 
 |               Type                |                           Dataset                            |
 | :-------------------------------: | :----------------------------------------------------------: |
-|     **Residential datasets**      | [[UK-DALE](https://www.nature.com/articles/sdata20157)] <br />[[REDD](https://energy.duke.edu/content/reference-energy-disaggregation-data-set-redd)] <br />[[REFIT](https://pureportal.strath.ac.uk/en/datasets/refit-electrical-load-measurements-cleaned)] <br /> [[AMpds/2](http://ampds.org/)] <br />[[Dataport](https://ieee-dataport.org/keywords/nilm)] <br />[[ECO](http://www.vs.inf.ethz.ch/res/show.html?what=eco-data)] <br />[[ENERTALK](https://www.nature.com/articles/s41597-019-0212-5)] <br />[[iAWE](https://iawe.github.io/)] <br />[[BLUED](http://portoalegre.andrew.cmu.edu:88/BLUED/)] <br />[[PLAID](https://www.nature.com/articles/s41597-020-0389-7)] <br />[[DRED](https://www.st.ewi.tudelft.nl/~akshay/dred/)] <br />[[Georges Hebrail UCI](https://archive.ics.uci.edu/ml/datasets/individual%2Bhousehold%2Belectric%2Bpower%2Bconsumption)] <br />[[GREEND](https://sourceforge.net/projects/greend/)] <br />[[HES](https://randd.defra.gov.uk/ProjectDetails?ProjectID=17359&FromSearch=Y&Publisher=1&SearchText=EV0702&SortString=ProjectCode&SortOrder=Asc&Paging=10#Description)] <br />[[TraceBase](https://github.com/areinhardt/tracebase)] <br />[[IDEAL](https://www.nature.com/articles/s41597-021-00921-y)] <br />[[HawkDATA]](https://github.com/WZiJ/SenSys24-Hawk) |
+|     **Residential datasets**      | [[UK-DALE](https://www.nature.com/articles/sdata20157)] <br />[[REDD](https://energy.duke.edu/content/reference-energy-disaggregation-data-set-redd)] <br />[[REFIT](https://pureportal.strath.ac.uk/en/datasets/refit-electrical-load-measurements-cleaned)] <br /> [[AMpds/2](http://ampds.org/)] <br />[[Dataport](https://ieee-dataport.org/keywords/nilm)] <br />[[ECO](http://www.vs.inf.ethz.ch/res/show.html?what=eco-data)] <br />[[ENERTALK](https://www.nature.com/articles/s41597-019-0212-5)] <br />[[iAWE](https://iawe.github.io/)] <br />[[BLUED](http://portoalegre.andrew.cmu.edu:88/BLUED/)] <br />[[PLAID](https://www.nature.com/articles/s41597-020-0389-7)] <br />[[DRED](https://www.st.ewi.tudelft.nl/~akshay/dred/)] <br />[[Georges Hebrail UCI](https://archive.ics.uci.edu/ml/datasets/individual%2Bhousehold%2Belectric%2Bpower%2Bconsumption)] <br />[[GREEND](https://sourceforge.net/projects/greend/)] <br />[[HES](https://randd.defra.gov.uk/ProjectDetails?ProjectID=17359&FromSearch=Y&Publisher=1&SearchText=EV0702&SortString=ProjectCode&SortOrder=Asc&Paging=10#Description)] <br />[[TraceBase](https://github.com/areinhardt/tracebase)] <br />[[IDEAL](https://www.nature.com/articles/s41597-021-00921-y)] <br />[[HawkDATA](https://github.com/WZiJ/SenSys24-Hawk)] |
 | **Commercial buildings datasets** | [[COMBED](https://combed.github.io/)] <br />[[BLOND](https://www.nature.com/articles/sdata201848)] |
 |      **Industrial datasets**      | [[Industrial Machines Dataset](https://ieee-dataport.org/open-access/industrial-machines-dataset-electrical-load-disaggregation)] <br />[[Aachen Smart Factory](http://www.finesce.eu/Trial_Site_Aachen.html)] <br />[[HIPE](https://www.energystatusdata.kit.edu/hipe.php)] |
 |        **Synthetic Data**         | [[SynD](https://github.com/klemenjak/SynD/)] <br />[[COLD](https://github.com/arx7ti/cold-nilm)] <br />[[FIRED](https://github.com/voelkerb/FIRED_dataset_helper)] <br />[[SHED](https://nilm.telecom-paristech.fr/shed/)] <br />[[smartsim](https://github.com/sustainablecomputinglab/smartsim)] |
@@ -54,6 +75,8 @@
 
 ## 🟧Deployment
 
+- A Real-Time Tsetlin Machine-based Non-intrusive Load Monitoring System on MCUs: reformulates NILM as a Boolean classification task solved by a Tsetlin Machine, achieving 90% precision / 96% recall for two-appliance classification on REDD with only 18 KB of flash and 0.43 ms inference latency on an ESP32, enabling privacy-preserving on-device NILM [[PDF](https://arxiv.org/abs/2608.18780)] [[CODE](https://github.com/wuhanstudio/nilm)] [2026]
+
 - Energy Management Using Real-Time Non-Intrusive Load Monitoring [[Arduino and Raspberry Pi-based](https://github.com/goruck/nilm)] 
 
 - flask-NILM-app-v1 [[Flask](https://github.com/Selim321/flask-NILM-app-v1)] 
@@ -62,6 +85,26 @@
  
 
 ## 🟩Methods
+
+### MSDCANet: A multi-scale dual-channel convolutional attention network for non-intrusive load disaggregation with enhanced feature extraction
+
+> Most deep NILM models rely on single-scale features, overlooking the multi-scale variations in power data caused by operational mode transitions, which may lead to overfitting and hinder differentiation of appliances with similar patterns. MSDCANet integrates multi-scale feature extraction, adaptive normalization and a multi-scale attention mechanism to extract and fuse features at various scales, enhancing disaggregation accuracy and generalization. Evaluated under origin-household and cross-household paradigms on UK-DALE and REDD, it outperforms state-of-the-art models in MAE, SAE and F1 for several high-energy-consuming appliances. [[PDF](https://doi.org/10.1016/j.dsp.2025.105605)] [[Pytorch](https://github.com/linfengYang/MSDCANet)] [2026] [Digital Signal Processing]
+
+### DualNILM: Energy Injection Identification enabled Disaggregation with Deep Multi-Task Learning
+
+> Behind-the-meter (BTM) PV generation breaks the non-negativity assumption of conventional NILM: when generation exceeds consumption, disaggregation turns into a severely under-constrained inverse problem. DualNILM is a Transformer-based multi-task framework that unifies sequence-to-point learning for appliance state detection with sequence-to-sequence modeling for continuous energy injection estimation, processing multi-channel signatures (active power, reactive power, etc.) with a dynamic attention mechanism. The authors also release PV-augmented versions of REDD and UK-DALE with realistic weather data. [[PDF](https://arxiv.org/abs/2508.14600)] [[CODE](https://github.com/MathAdventurer/PV-Augmented-NILM-Datasets)] [2025]
+
+### NILMFormer: Non-Intrusive Load Monitoring that Accounts for Non-Stationarity
+
+> Current state-of-the-art NILM solutions process household consumption in subsequences, but the non-stationary nature of real-world smart meter data leads to distribution drift within each window, which severely affects model performance. NILMFormer is a sequence-to-sequence Transformer-based architecture that incorporates a new subsequence stationarization/de-stationarization scheme to mitigate the drift, and a novel positional encoding relying only on the subsequence's timestamp information. Experiments on 4 real-world datasets show that it significantly outperforms SotA approaches. It has been deployed as the backbone algorithm of EDF's (Electricité de France) consumption monitoring service, delivering detailed appliance-level insights to millions of customers. [[PDF](https://arxiv.org/abs/2506.05880)] [[Pytorch](https://github.com/adrienpetralia/NILMFormer)] [KDD 2025]
+
+### Prompting Large Language Models for Training-Free Non-Intrusive Load Monitoring
+
+> The first prompt-based NILM framework that leverages large language models (LLMs) with in-context learning. Prompt strategies integrate appliance features, timestamps and contextual information, as well as representative time-series examples. On REDD and UK-DALE, LLMs guided solely by prompts deliver competitive state detection accuracy (average F1-score of 0.676 on unseen households) and demonstrate robust generalization across houses and even regions without any fine-tuning, while providing clear, human-readable explanations for the inferred appliance states. [[PDF](https://arxiv.org/abs/2505.06330)] [[CODE](https://github.com/SusCom-Lab/llm-for-nilm)] [2025]
+
+### A diffusion model-based framework to enhance the robustness of non-intrusive load disaggregation
+
+> Existing NILM models require substantial labeled data, and existing datasets often contain significant noise. This work proposes a NILM data augmentation architecture based on diffusion models: the diffusion model is optimized to generate multi-state, low-noise load data, and synthetic data mixed with the original data improves disaggregation ability while reducing the need for large training sets. A tailored loss function and post-processing algorithm further enhance noise resistance and decomposition stability, significantly improving MAE, SAE and F1 in both origin-household and cross-household scenarios. [[PDF](https://www.sciencedirect.com/science/article/pii/S0360544225010655)] [[Pytorch](https://github.com/linfengYang/DiffusionModel_NILM)] [2025] [Energy]
 
 ### Hawk: An Efficient NALM System for Accurate Low-Power Appliance Recognition
 
@@ -73,7 +116,7 @@
 
 ### Graph-Based Dependency-Aware Non-Intrusive Load Monitoring
 
-> Non-intrusive load monitoring (NILM) is able to analyze and predict users’ power consumption behaviors for further improving the power consumption efficiency of the grid. Neural network-based techniques have been developed for NILM. However, the dependencies of multiple appliances working simultaneously were ignored or implicitly characterized in their models for disaggregation. To improve the performance of NILM, we employ a graph structure to explicitly characterize the temporal dependencies among different appliances. Specially, we consider the prior temporal knowledge between the appliances in the working state, construct a weighted adjacency matrix to represent their dependencies. We also introduce hard dependencies of each appliance to prevent the sparsity of the weighted adjacency matrix. Furthermore, the non-sequential dependencies are learned among appliances using a graph attention network based on the weighted adjacency matrix. An encoder-decoder architecture based on dilated convolutions is developed for power estimation and state detection at the same time. We demonstrate the proposed model on the UKDALE dataset, which outperforms several state-of-the-art results for NILM. [[PDF](https://dl.acm.org/doi/pdf/10.1145/3666025.3699359)] [[Pytorch](https://github.com/zhgqcn/GRAD-NILM/tree/main)] [PRCV 2023] 
+> Non-intrusive load monitoring (NILM) is able to analyze and predict users’ power consumption behaviors for further improving the power consumption efficiency of the grid. Neural network-based techniques have been developed for NILM. However, the dependencies of multiple appliances working simultaneously were ignored or implicitly characterized in their models for disaggregation. To improve the performance of NILM, we employ a graph structure to explicitly characterize the temporal dependencies among different appliances. Specially, we consider the prior temporal knowledge between the appliances in the working state, construct a weighted adjacency matrix to represent their dependencies. We also introduce hard dependencies of each appliance to prevent the sparsity of the weighted adjacency matrix. Furthermore, the non-sequential dependencies are learned among appliances using a graph attention network based on the weighted adjacency matrix. An encoder-decoder architecture based on dilated convolutions is developed for power estimation and state detection at the same time. We demonstrate the proposed model on the UKDALE dataset, which outperforms several state-of-the-art results for NILM. [[PDF](https://link.springer.com/chapter/10.1007/978-981-99-8549-4_8)] [[Pytorch](https://github.com/zhgqcn/GRAD-NILM/tree/main)] [PRCV 2023]
 
 <p align="center">
     <img title="" src="./img/GRAD-NILM.png" alt="" width="800" data-align="center">
@@ -86,6 +129,10 @@
 <p align="center">
     <img title="" src="./img/MSDC-NILM_2023-11-27_11-33-35.jpg" alt="" width="800" data-align="center">
 </p>
+
+### MATNilm: Multi-appliance-task Non-intrusive Load Monitoring with Limited Labeled Data
+
+> Existing approaches mainly develop an individual model for each appliance, typically relying on a large amount of household-labeled data which is hard to collect. MATNilm proposes a multi-appliance-task framework with a training-efficient sample augmentation (SA) scheme: a shared-hierarchical split structure handles the regression and classification tasks of each appliance, and a two-dimensional attention mechanism captures spatio-temporal correlations among all appliances. With only one-day training data and limited appliance operation profiles, the SA algorithm achieves test performance comparable to training on the full dataset; relative errors are reduced by more than 50% on average. [[PDF](https://arxiv.org/abs/2307.14778)] [[Pytorch](https://github.com/jxiong22/MATNilm)] [2023]
 
 
 
@@ -184,7 +231,7 @@
 
 ### Improving Non-Intrusive Load Disaggregation through an Attention-Based Deep Neural Network
 
-> We improve the generalization capability of the overall architecture by including an encoder–decoder with a tailored attention mechanism in the regression subnetwork. The attention mechanism is inspired by the temporal attention. [[PDF](https://www.mdpi.com/1996-1073/14/4/847)] [[Tensorflow](tensorflow)] [2021]
+> We improve the generalization capability of the overall architecture by including an encoder–decoder with a tailored attention mechanism in the regression subnetwork. The attention mechanism is inspired by the temporal attention. [[PDF](https://www.mdpi.com/1996-1073/14/4/847)] [[Tensorflow](https://github.com/antoniosudoso/attention-nilm)] [2021]
 
 <p align='center'>
     <img title="" src="./img/attention-NILM.png" alt="" width="800" data-align="center">
@@ -398,5 +445,9 @@
 <p align='center'>
     <img title="" src="./img/neural-nilm.png" alt="" data-align="center">
 </p>
+
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=zhgqcn/awesome-NILM-with-code&type=Date)](https://star-history.com/#zhgqcn/awesome-NILM-with-code&Date)
 
 
